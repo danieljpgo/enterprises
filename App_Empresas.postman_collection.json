@@ -1,0 +1,317 @@
+{
+	"info": {
+		"_postman_id": "177fa9a2-da31-4c99-961b-8c74daeacc98",
+		"name": "App_Empresas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Sign_in",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "5bdb4da0-487c-402c-a51e-0330cc7f9219",
+								"exec": [
+									"if (responseCode.code === 200)",
+									"{",
+									"    postman.setEnvironmentVariable(\"access-token\", postman.getResponseHeader('access-token'));",
+									"    postman.setEnvironmentVariable(\"client\", postman.getResponseHeader('client'));",
+									"    postman.setEnvironmentVariable(\"uid\", postman.getResponseHeader('uid'));",
+									"}",
+									"",
+									"var responseJSON;",
+									"",
+									"try { responseJSON = JSON.parse(responseBody); }",
+									"catch (e) { }",
+									"",
+									"",
+									"if ('id' in responseJSON)",
+									"{",
+									"    postman.setEnvironmentVariable((\"user_id\"), responseJSON.id);",
+									"}",
+									"",
+									"tests[\"Response time is less than 200ms\"] = responseTime < 200;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\" : \"testeapple@ioasys.com.br\",\n  \"password\" : \"12341234\"\n}"
+						},
+						"url": {
+							"raw": "http://empresas.ioasys.com.br/api/v1/users/auth/sign_in",
+							"protocol": "http",
+							"host": [
+								"empresas",
+								"ioasys",
+								"com",
+								"br"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"auth",
+								"sign_in"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Enterprise",
+			"item": [
+				{
+					"name": "Enterprise Index",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "43476caa-3a1b-4d47-8be1-2ecde0ee2990",
+								"exec": [
+									"if (responseCode.code === 200)",
+									"{",
+									"    postman.setEnvironmentVariable(\"access-token\", postman.getResponseHeader('access-token'));",
+									"    postman.setEnvironmentVariable(\"client\", postman.getResponseHeader('client'));",
+									"    postman.setEnvironmentVariable(\"uid\", postman.getResponseHeader('uid'));",
+									"}",
+									"",
+									"var responseJSON;",
+									"",
+									"try { responseJSON = JSON.parse(responseBody); }",
+									"catch (e) { }",
+									"",
+									"",
+									"if ('id' in responseJSON)",
+									"{",
+									"    postman.setEnvironmentVariable((\"user_id\"), responseJSON.id);",
+									"}",
+									"",
+									"tests[\"Response time is less than 200ms\"] = responseTime < 200;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "access-token",
+								"value": "{{access-token}}"
+							},
+							{
+								"key": "client",
+								"value": "{{client}}"
+							},
+							{
+								"key": "uid",
+								"value": "{{uid}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://empresas.ioasys.com.br/api/v1/enterprises",
+							"protocol": "http",
+							"host": [
+								"empresas",
+								"ioasys",
+								"com",
+								"br"
+							],
+							"path": [
+								"api",
+								"v1",
+								"enterprises"
+							]
+						},
+						"description": "Lista de enterprise_types:\n- [enterprise_type_code, name]\n- [1, \"Agro\"]\n- [2, \"Aviation\"]\n- [3, \"Biotech\"]\n- [4, \"Eco\"]\n- [5, \"Ecommerce\"]\n- [6, \"Education\"]\n- [7, \"Fashion\"]\n- [8, \"Fintech\"]\n- [9, \"Food\"]\n- [10, \"Games\"]\n- [11, \"Health\"]\n- [12, \"IOT\"]\n- [13, \"Logistics\"]\n- [14, \"Media\"]\n- [15, \"Mining\"]\n- [16, \"Products\"]\n- [17, \"Real Estate\"]\n- [18, \"Service\"]\n- [19, \"Smart City\"]\n- [20, \"Social\"]\n- [21, \"Software\"]\n- [22, \"Technology\"]\n- [23, \"Tourism\"]\n- [24, \"Transport\"]"
+					},
+					"response": []
+				},
+				{
+					"name": "Show",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ac1336b2-8c24-4627-822f-a0bdf9146b0a",
+								"exec": [
+									"if (responseCode.code === 200)",
+									"{",
+									"    postman.setEnvironmentVariable(\"access-token\", postman.getResponseHeader('access-token'));",
+									"    postman.setEnvironmentVariable(\"client\", postman.getResponseHeader('client'));",
+									"    postman.setEnvironmentVariable(\"uid\", postman.getResponseHeader('uid'));",
+									"}",
+									"",
+									"var responseJSON;",
+									"",
+									"try { responseJSON = JSON.parse(responseBody); }",
+									"catch (e) { }",
+									"",
+									"",
+									"if ('id' in responseJSON)",
+									"{",
+									"    postman.setEnvironmentVariable((\"user_id\"), responseJSON.id);",
+									"}",
+									"",
+									"tests[\"Response time is less than 200ms\"] = responseTime < 200;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "access-token",
+								"value": "{{access-token}}"
+							},
+							{
+								"key": "client",
+								"value": "{{client}}"
+							},
+							{
+								"key": "uid",
+								"value": "{{uid}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://empresas.ioasys.com.br/api/v1/enterprises/1",
+							"protocol": "http",
+							"host": [
+								"empresas",
+								"ioasys",
+								"com",
+								"br"
+							],
+							"path": [
+								"api",
+								"v1",
+								"enterprises",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Enterprises Index with Filter",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "7f207daf-d869-4526-b2cf-a071cea61b37",
+								"exec": [
+									"if (responseCode.code === 200)",
+									"{",
+									"    postman.setEnvironmentVariable(\"access-token\", postman.getResponseHeader('access-token'));",
+									"    postman.setEnvironmentVariable(\"client\", postman.getResponseHeader('client'));",
+									"    postman.setEnvironmentVariable(\"uid\", postman.getResponseHeader('uid'));",
+									"}",
+									"",
+									"var responseJSON;",
+									"",
+									"try { responseJSON = JSON.parse(responseBody); }",
+									"catch (e) { }",
+									"",
+									"",
+									"if ('id' in responseJSON)",
+									"{",
+									"    postman.setEnvironmentVariable((\"user_id\"), responseJSON.id);",
+									"}",
+									"",
+									"tests[\"Response time is less than 200ms\"] = responseTime < 200;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "access-token",
+								"value": "{{access-token}}"
+							},
+							{
+								"key": "client",
+								"value": "{{client}}"
+							},
+							{
+								"key": "uid",
+								"value": "{{uid}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://empresas.ioasys.com.br/api/v1/enterprises?enterprise_types=1&name=aQm",
+							"protocol": "http",
+							"host": [
+								"empresas",
+								"ioasys",
+								"com",
+								"br"
+							],
+							"path": [
+								"api",
+								"v1",
+								"enterprises"
+							],
+							"query": [
+								{
+									"key": "enterprise_types",
+									"value": "1"
+								},
+								{
+									"key": "name",
+									"value": "aQm"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

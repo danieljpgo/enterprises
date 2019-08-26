@@ -4,7 +4,7 @@ Estes documento README tem como objetivo fornecer as informações necessárias 
 
 ### O QUE FAZER ? ###
 
-* Você deve fazer um fork deste repositório, criar o código e ao finalizar realizar o commit e solicitar um pull request, nós iremos avaliar e retornar por email o resultado do seu teste.
+* Você deve fazer um fork deste repositório para o desenvolvimento do teste. Após o desenvolvimento você deve enviar por email um link do seu repositório. Nós iremos avaliar seu projeto e retornar o resultado do seu teste.
 
 ### ESCOPO DO PROJETO ###
 
@@ -24,7 +24,8 @@ Estes documento README tem como objetivo fornecer as informações necessárias 
 * senha: teste_ioasys
 
 * Integração disponível a partir de uma collection para Postman (https://www.getpostman.com/apps) disponível neste repositório. Para utilizar a collection, vá até o postman e import a colllection que está disponível neste repositório, assim você terá acesso as documentação da API.
-* É obrigatório utilização de AngularJS ou ReactJS
+
+* É obrigatório utilização do ReactJS.
 
 * É importante criar o layout responsivo, usando boas práticas e organização.
 
@@ -39,5 +40,7 @@ Estes documento README tem como objetivo fornecer as informações necessárias 
 
 ### Dicas ###
 
-*  Utilize um dos frameworks: Bootstrap(http://getbootstrap.com/) ou Materializecss(http://materializecss.com).
+* Você pode utilizar um dos frameworks: Bootstrap(http://getbootstrap.com/) ou Materializecss(http://materializecss.com).
 * No postman existem alguns parâmetros no header que devem ser passados em todas requests exceto na de login, eles serão retornados no endpoint de login, nos headers da request.
+* Sobrou tempo? Testes unitários, integração e e2e no sistema são bem vindos.
+

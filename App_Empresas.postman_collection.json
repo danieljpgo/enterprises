@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "177fa9a2-da31-4c99-961b-8c74daeacc98",
+		"_postman_id": "306320f3-b94d-4085-b616-de512a637c3b",
 		"name": "App_Empresas",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -53,8 +53,8 @@
 							"raw": "{\n  \"email\" : \"testeapple@ioasys.com.br\",\n  \"password\" : \"12341234\"\n}"
 						},
 						"url": {
-							"raw": "http://empresas.ioasys.com.br/api/v1/users/auth/sign_in",
-							"protocol": "http",
+							"raw": "https://empresas.ioasys.com.br/api/v1/users/auth/sign_in",
+							"protocol": "https",
 							"host": [
 								"empresas",
 								"ioasys",
@@ -129,13 +129,9 @@
 								"value": "{{uid}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
-							"raw": "http://empresas.ioasys.com.br/api/v1/enterprises",
-							"protocol": "http",
+							"raw": "https://empresas.ioasys.com.br/api/v1/enterprises",
+							"protocol": "https",
 							"host": [
 								"empresas",
 								"ioasys",
@@ -204,13 +200,9 @@
 								"value": "{{uid}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
-							"raw": "http://empresas.ioasys.com.br/api/v1/enterprises/1",
-							"protocol": "http",
+							"raw": "https://empresas.ioasys.com.br/api/v1/enterprises/1",
+							"protocol": "https",
 							"host": [
 								"empresas",
 								"ioasys",
@@ -279,13 +271,9 @@
 								"value": "{{uid}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
-							"raw": "http://empresas.ioasys.com.br/api/v1/enterprises?enterprise_types=1&name=aQm",
-							"protocol": "http",
+							"raw": "https://empresas.ioasys.com.br/api/v1/enterprises?enterprise_types=1&name=aQm",
+							"protocol": "https",
 							"host": [
 								"empresas",
 								"ioasys",

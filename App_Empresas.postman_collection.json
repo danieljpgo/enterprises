@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "306320f3-b94d-4085-b616-de512a637c3b",
+		"_postman_id": "28f8a63b-db63-475c-9739-f16005eac576",
 		"name": "App_Empresas",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -14,7 +14,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "5bdb4da0-487c-402c-a51e-0330cc7f9219",
+								"id": "2cde939d-8204-48a0-a7dc-6ffe712e652a",
 								"exec": [
 									"if (responseCode.code === 200)",
 									"{",
@@ -72,7 +72,8 @@
 					},
 					"response": []
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "Enterprise",
@@ -83,7 +84,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "43476caa-3a1b-4d47-8be1-2ecde0ee2990",
+								"id": "6074d36e-a03d-46b4-a1ad-337e61b78aab",
 								"exec": [
 									"if (responseCode.code === 200)",
 									"{",
@@ -154,7 +155,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "ac1336b2-8c24-4627-822f-a0bdf9146b0a",
+								"id": "c379b386-3a87-411b-8cb2-bd6d4f267c3a",
 								"exec": [
 									"if (responseCode.code === 200)",
 									"{",
@@ -225,7 +226,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "7f207daf-d869-4526-b2cf-a071cea61b37",
+								"id": "85cc9709-2fe2-4250-aca7-35f9603e0f52",
 								"exec": [
 									"if (responseCode.code === 200)",
 									"{",
@@ -272,7 +273,7 @@
 							}
 						],
 						"url": {
-							"raw": "https://empresas.ioasys.com.br/api/v1/enterprises?enterprise_types=1&name=aQm",
+							"raw": "https://empresas.ioasys.com.br/api/v1/enterprises?name=aQm",
 							"protocol": "https",
 							"host": [
 								"empresas",
@@ -287,10 +288,6 @@
 							],
 							"query": [
 								{
-									"key": "enterprise_types",
-									"value": "1"
-								},
-								{
 									"key": "name",
 									"value": "aQm"
 								}
@@ -299,7 +296,9 @@
 					},
 					"response": []
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		}
-	]
+	],
+	"protocolProfileBehavior": {}
 }

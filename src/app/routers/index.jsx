@@ -14,6 +14,9 @@ import List from '../modules/Company/List';
 import Details from '../modules/Company/Details';
 import Navigation from '../common/layout/Navigation';
 
+// @TODO Avaliar o uso de code split, fallback e suspense
+// @TODO Mergiar com a master
+
 const Routers = () => (
   <BrowserRouter>
     <Routes>

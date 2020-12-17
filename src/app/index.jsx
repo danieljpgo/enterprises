@@ -1,5 +1,5 @@
-import { theme } from '../app/styles/themes/light';
 import { ThemeProvider } from 'styled-components';
+import { theme } from './styles/themes/light';
 import { GlobalStyles } from './styles/global';
 
 const App = () => (

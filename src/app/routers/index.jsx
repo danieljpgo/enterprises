@@ -5,6 +5,8 @@ import {
   BrowserRouter,
 } from 'react-router-dom';
 
+import PrivateRoute from './PrivateRoute';
+
 import Auth from '../modules/Auth';
 import Login from '../modules/Auth/Login';
 import Home from '../modules/Home';
@@ -37,7 +39,11 @@ const Routers = () => (
 
       <Route
         key="navigation"
-        element={<Navigation />}
+        element={(
+          <PrivateRoute>
+            <Navigation />
+          </PrivateRoute>
+        )}
       >
         <Route
           key="home"

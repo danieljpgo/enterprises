@@ -1,11 +1,15 @@
+import PropTypes from 'prop-types';
 import { Container } from './styles';
 
-// @TODO Adicionar props types
+const propTypes = {
+  children: PropTypes.string,
+  variants: PropTypes.oneOf(['main', 'base', 'sub', 'aux', 'warning', 'contrast']),
+};
 
 const Text = (props) => {
   const {
-    children,
-    variants,
+    children = 'untitled',
+    variants = 'main',
   } = props;
 
   return (
@@ -14,5 +18,7 @@ const Text = (props) => {
     </Container>
   );
 };
+
+Text.propTypes = propTypes;
 
 export default Text;

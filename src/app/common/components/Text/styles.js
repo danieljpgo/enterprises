@@ -44,8 +44,5 @@ const variants = {
 };
 
 export const Container = styled.p`  
-  font-family: Roboto;
-  font-weight: 400;
-
   ${(props) => variants[props.$variants]};
 `;

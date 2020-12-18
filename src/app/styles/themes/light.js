@@ -3,7 +3,7 @@ import { breakpoints } from '../tokens/breakpoints';
 import { shapes } from '../tokens/shape';
 import { typography } from '../tokens/typography';
 
-export const unit = 4;
+export const unit = 8;
 // https://app.zeplin.io/project/5977c41d78a49a0f1bf3966b/styleguide/spacing?seid=5977c41d78a49a0f1bf3966b
 
 export const theme = {

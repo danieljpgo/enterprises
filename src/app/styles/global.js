@@ -12,6 +12,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
+    font-family: Roboto, Source Sans Pro;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }

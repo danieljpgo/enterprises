@@ -1,16 +1,41 @@
 import { colors } from '../tokens/colors';
 import { breakpoints } from '../tokens/breakpoints';
+import { shapes } from '../tokens/shape';
+import { typography } from '../tokens/typography';
 
-export const unit = 16;
+export const unit = 4;
+// https://app.zeplin.io/project/5977c41d78a49a0f1bf3966b/styleguide/spacing?seid=5977c41d78a49a0f1bf3966b
 
 export const theme = {
   title: 'light',
 
   unit,
 
-  colors,
-
-  shapes: {},
-
+  colors: {
+    primary: {},
+    secundary: {
+      disabled: colors.blue[200],
+      main: colors.blue[500],
+    },
+    text: {
+      main: colors.gray[400],
+      sub: colors.gray[800],
+      aux: colors.gray[300],
+      warning: colors.red[500],
+      contrast: colors.white,
+    },
+    title: {
+      base: colors.gray[800],
+      aux: colors.indigo[800],
+      contrast: colors.white,
+    },
+    surface: {
+      base: colors.white,
+      constrast: '',
+      background: colors.gray[200],
+    },
+  },
+  shapes,
   breakpoints,
+  typography,
 };

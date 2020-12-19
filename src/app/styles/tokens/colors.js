@@ -7,8 +7,11 @@ export const colors = {
     400: '#8d8c8c', // warm-grey
     500: '#0000008a', // rgba(0, 0, 0, 0.54)'
     600: '#38374380', // charcoal-grey with 0.5 opacity
+    700: '#494758', // input
     800: '#383743', // charcoal-grey
+    900: '#403e4d', // charcoal-grey-two
   },
+
   blue: {
     200: '#748383',
     500: '#57bbbc',

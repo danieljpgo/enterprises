@@ -29,10 +29,14 @@ export const theme = {
       aux: colors.indigo[800],
       contrast: colors.white,
     },
+    input: {
+      base: colors.gray[900],
+    },
     surface: {
       base: colors.white,
       constrast: '',
       background: colors.gray[200],
+      input: colors.gray[800],
       gradiente: [
         colors.pink[500],
         colors.blue[800],

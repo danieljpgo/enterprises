@@ -11,7 +11,7 @@ const PrivateRoute = (props) => {
     <>
       {userToken
         ? children
-        : <Navigate to="autenticacao/login" />}
+        : <Navigate to="login" />}
     </>
   );
 };

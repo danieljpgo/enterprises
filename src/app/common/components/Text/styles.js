@@ -22,7 +22,7 @@ const variants = {
     font-size: 17px;
     font-weight: normal;
     font-family: ${(props) => props.theme.typography.fontFamily.primary};
-    letter-spacing: 0.2px;
+    letter-spacing: -0.25px;
   `,
   aux: css`
     color: ${(props) => props.theme.colors.text.aux};

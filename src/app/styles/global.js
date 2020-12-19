@@ -15,10 +15,24 @@ export const GlobalStyles = createGlobalStyle`
     font-family: Roboto, Source Sans Pro;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: ${(props) => props.theme.colors.surface.background};
   }
 
   body, input, button, textarea, select {
 
+  }
+
+  fieldset{
+    border-width: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-block-end: 0px;
+    padding-block-start: 0px;
+    padding-inline-end: 0px;
+    padding-inline-start: 0px;
+    border-style: none;
+    border-color: unset;
+    border-image: none;
   }
 
   button {

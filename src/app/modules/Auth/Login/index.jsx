@@ -27,7 +27,9 @@ const Login = () => (
           <input />
         </fieldset>
         <div>
-          <Button onClick={() => console.log('test')}>Entrar</Button>
+          <Button onClick={() => { }}>
+            Entrar
+          </Button>
         </div>
       </div>
     </Content>

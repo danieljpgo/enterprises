@@ -33,6 +33,10 @@ export const theme = {
       base: colors.white,
       constrast: '',
       background: colors.gray[200],
+      gradiente: [
+        colors.pink[500],
+        colors.blue[800],
+      ],
     },
   },
   shapes,

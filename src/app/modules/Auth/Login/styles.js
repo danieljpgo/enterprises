@@ -34,10 +34,14 @@ export const Content = styled.div`
       padding: 0 ${(props) => props.theme.unit * 4}px;
     }
     fieldset{
+      width: 100%;
       > form {
         display: grid;
         gap: ${(props) => props.theme.unit * 3.75}px;
         padding: ${(props) => props.theme.unit * 3}px 0 ${(props) => props.theme.unit * 2.5}px;;
+      }
+      > div {
+        height: 14px;
       }
     }
     > div:last-child{

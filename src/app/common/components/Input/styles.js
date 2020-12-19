@@ -7,14 +7,18 @@ const status = {
 };
 
 export const Container = styled.div`
-  gap: 10px;
   display: flex;
+  gap: ${(props) => props.theme.unit * 1.25}px;
   align-items: center;
-  padding: 4px;
+  padding: ${(props) => props.theme.unit / 2}px;
+  width: 100%;
   border-bottom: solid 1px ${(props) => props.theme.colors.surface.input};
 
-  ${(props) => status[props?.$status]};
+  :focus-within{
+    border-color: ${(props) => props.theme.colors.input.line};
+  }
 
+  ${(props) => status[props?.$status]};
   input {
     width: 100%;
     border: none;
@@ -38,12 +42,10 @@ export const Error = styled.div`
   width: ${(props) => props.theme.unit * 3}px;
   background-color: ${(props) => props.theme.colors.text.warning};
   border-radius: 50%;
-
   display: flex;
   align-items: center;
   padding: 0 11px;
-
-  color: white;
+  color: ${(props) => props.theme.colors.text.contrast};
 `;
 
 export const Slot = styled.div`

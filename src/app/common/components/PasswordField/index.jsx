@@ -9,7 +9,7 @@ const propTypes = {
   id: PropTypes.string,
   name: PropTypes.string,
   startAdornment: PropTypes.node,
-  status: PropTypes.oneOf(['error']),
+  status: PropTypes.oneOf(['error', false]),
   value: PropTypes.string,
   onChange: PropTypes.func.isRequired,
 };
@@ -30,16 +30,14 @@ const PasswordField = (props) => {
     setShowPassword((prev) => !prev);
   }
 
-  const type = showPassword ? 'text' : 'password';
-
   return (
     <Input
       id={id}
       name={name}
-      type={type}
+      type={showPassword ? 'text' : 'password'}
       status={status}
       startAdornment={startAdornment}
-      endAdornment={(
+      endAdornment={value && (
         <IconButton
           type="button"
           onClick={() => handleShowPassword()}

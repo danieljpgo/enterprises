@@ -33,8 +33,6 @@ const Login = () => {
     setPassword(newPassword);
   }
 
-  const buttonDisabled = isLoading || !email || !password;
-
   return (
     <Container>
       <Content>
@@ -68,18 +66,20 @@ const Login = () => {
                 onChange={(event) => handlePasswordChange(event.target.value)}
               />
             </form>
-            {isError && (
-              <Text variants="warning">
-                Credenciais informadas são inválidas, tente novamente.
-              </Text>
-            )}
+            <div>
+              {isError && (
+                <Text variants="warning">
+                  Credenciais informadas são inválidas, tente novamente.
+                </Text>
+              )}
+            </div>
           </fieldset>
 
           <div>
             <Button
               type="submit"
               form="login-form"
-              disabled={buttonDisabled}
+              disabled={isLoading || !email || !password}
               onClick={() => handleLoginSubmit(email, password)}
             >
               Entrar

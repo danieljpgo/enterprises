@@ -31,6 +31,9 @@ export const theme = {
     },
     input: {
       base: colors.gray[900],
+      line: colors.pink[500],
+      icons: colors.pink[500],
+      actionIcons: colors.gray[500],
     },
     surface: {
       base: colors.white,

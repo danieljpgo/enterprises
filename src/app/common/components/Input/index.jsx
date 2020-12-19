@@ -8,7 +8,7 @@ const propTypes = {
   name: PropTypes.string,
   type: PropTypes.oneOf(['text', 'email', 'number', 'password', 'date', 'datetime-local', 'search', 'tel', 'time']),
   value: PropTypes.oneOfType([PropTypes.number, PropTypes.string, PropTypes.instanceOf(Date)]),
-  status: PropTypes.oneOf(['error']),
+  status: PropTypes.oneOf(['error', false]),
   startAdornment: PropTypes.node,
   endAdornment: PropTypes.node,
   onChange: PropTypes.func.isRequired,

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router';
 import { Container, Content } from './styles';
 import Title from '../../../common/components/Title';
 import Text from '../../../common/components/Text';
@@ -8,25 +9,49 @@ import Input from '../../../common/components/Input';
 import PasswordField from '../../../common/components/PasswordField';
 import MainIcon from '../../../common/components/icons/MailIcon';
 import PasswordIcon from '../../../common/components/icons/PasswordIcon';
+import { api } from '../../../common/services/api';
+import { setLocalStorageData } from '../../../common/utils/helpers/localStorage';
 
 // @TODO baixar uma lib para lidar com diferente tamanhos de imagens
-// @TODO tamanho da logo "height"
+// @TODO mensagens de error
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoaing] = useState(false);
-  const [isError, setIsError] = useState(false);
+  const [requestError, setRequestError] = useState('');
 
-  function handleLoginSubmit(emailSubmitted, passwordSubmitted) {
+  const navigate = useNavigate();
+
+  async function handleLoginSubmit(emailSubmitted, passwordSubmitted) {
     setIsLoaing(true);
-    console.log(emailSubmitted, passwordSubmitted);
+    try {
+      const response = await api.post('users/auth/sign_in', {
+        email: emailSubmitted,
+        password: passwordSubmitted,
+      });
+      setIsLoaing(false);
+
+      if (response?.data?.success) {
+        setLocalStorageData('headers', response.headers);
+        navigate('/');
+      } else {
+        setRequestError('Falha ao realizar o login, tentar novamente mais tarde.');
+      }
+    } catch (error) {
+      setIsLoaing(false);
+
+      const { status } = error.response;
+      if (status === 401) {
+        setRequestError('Credenciais de login inválidas. Por favor, tente novamente.');
+      } else {
+        setRequestError('Falha ao realizar o login, tentar novamente mais tarde.');
+      }
+    }
   }
 
   function handleEmailChange(newEmail) {
     setEmail(newEmail);
-
-    setIsError(true);
   }
 
   function handlePasswordChange(newPassword) {
@@ -54,22 +79,22 @@ const Login = () => {
                 id="email"
                 name="email"
                 type="email"
-                status={isError && 'error'}
+                status={requestError && 'error'}
                 startAdornment={<MainIcon />}
                 value={email}
                 onChange={(event) => handleEmailChange(event.target.value)}
               />
               <PasswordField
-                status={isError && 'error'}
+                status={requestError && 'error'}
                 startAdornment={<PasswordIcon />}
                 value={password}
                 onChange={(event) => handlePasswordChange(event.target.value)}
               />
             </form>
             <div>
-              {isError && (
+              {requestError && (
                 <Text variants="warning">
-                  Credenciais informadas são inválidas, tente novamente.
+                  {requestError}
                 </Text>
               )}
             </div>

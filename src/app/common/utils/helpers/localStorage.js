@@ -1,8 +1,10 @@
-// @TODO Melhorar aqui
-
 export const getLocalStorageData = (key) => {
   const data = window.localStorage.getItem(key);
-  return data && JSON.parse(data);
+  try {
+    return data ? JSON.parse(data) : undefined;
+  } catch {
+    return undefined;
+  }
 };
 
 export const setLocalStorageData = (key, body) => {

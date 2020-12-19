@@ -1,23 +1,27 @@
 import { Navigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { getLocalStorageData } from '../../common/utils/helpers/localStorage';
 
 const propTypes = {
   children: PropTypes.node.isRequired,
 };
-const PrivateRoute = (props) => {
-  const { children } = props; // eslint-disable-line 
 
-  const userToken = true;
+// @TODO adicionar as validações necessárias do token salvo
+
+const PrivateRoute = (props) => {
+  const { children } = props;
+
+  const headers = getLocalStorageData('headers');
 
   return (
     <>
-      {userToken
+      {headers
         ? children
         : <Navigate to="login" />}
     </>
   );
 };
 
-PrivateRoute.prototype = propTypes;
+PrivateRoute.propTypes = propTypes;
 
 export default PrivateRoute;

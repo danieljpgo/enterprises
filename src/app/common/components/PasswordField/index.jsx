@@ -1,6 +1,9 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 import Input from '../Input';
+import EyeIcon from '../EyeIcon';
+import EyeEmptyIcon from '../EyeEmptyIcon';
+import { IconButton } from './styles';
 
 const propTypes = {
   id: PropTypes.string,
@@ -37,12 +40,14 @@ const PasswordField = (props) => {
       status={status}
       startAdornment={startAdornment}
       endAdornment={(
-        <button
+        <IconButton
           type="button"
           onClick={() => handleShowPassword()}
         >
-          olho
-        </button>
+          {showPassword
+            ? <EyeIcon />
+            : <EyeEmptyIcon />}
+        </IconButton>
       )}
       value={value}
       onChange={onChange}

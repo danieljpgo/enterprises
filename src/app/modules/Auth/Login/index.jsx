@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Container, Content } from './styles';
 import Title from '../../../common/components/Title';
 import Text from '../../../common/components/Text';
@@ -5,13 +6,34 @@ import Button from '../../../common/components/Button';
 import logo from '../../../common/assets/images/logo-home.png';
 import Input from '../../../common/components/Input';
 import PasswordField from '../../../common/components/PasswordField';
+import MainIcon from '../../../common/components/MailIcon';
+import PasswordIcon from '../../../common/components/PasswordIcon';
 
 // @TODO baixar uma lib para lidar com diferente tamanhos de imagens
 // @TODO tamanho da logo "height"
 
 const Login = () => {
-  function handleLoginSubmit() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [isLoading, setIsLoaing] = useState(false);
+  const [isError, setIsError] = useState(false);
+
+  function handleLoginSubmit(emailSubmitted, passwordSubmitted) {
+    setIsLoaing(true);
+    console.log(emailSubmitted, passwordSubmitted);
   }
+
+  function handleEmailChange(newEmail) {
+    setEmail(newEmail);
+
+    setIsError(true);
+  }
+
+  function handlePasswordChange(newPassword) {
+    setPassword(newPassword);
+  }
+
+  const buttonDisabled = isLoading || !email || !password;
 
   return (
     <Container>
@@ -34,24 +56,31 @@ const Login = () => {
                 id="email"
                 name="email"
                 type="email"
-                status="error"
-                startAdornment={<div>a</div>}
+                status={isError && 'error'}
+                startAdornment={<MainIcon />}
+                value={email}
+                onChange={(event) => handleEmailChange(event.target.value)}
               />
               <PasswordField
-                status="error"
-                startAdornment={<div>a</div>}
+                status={isError && 'error'}
+                startAdornment={<PasswordIcon />}
+                value={password}
+                onChange={(event) => handlePasswordChange(event.target.value)}
               />
             </form>
-            <Text variants="warning">
-              Credenciais informadas são inválidas, tente novamente.
-            </Text>
+            {isError && (
+              <Text variants="warning">
+                Credenciais informadas são inválidas, tente novamente.
+              </Text>
+            )}
           </fieldset>
 
           <div>
             <Button
               type="submit"
               form="login-form"
-              onClick={() => handleLoginSubmit()}
+              disabled={buttonDisabled}
+              onClick={() => handleLoginSubmit(email, password)}
             >
               Entrar
             </Button>

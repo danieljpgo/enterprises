@@ -45,3 +45,7 @@ export const Error = styled.div`
 
   color: white;
 `;
+
+export const Slot = styled.div`
+  display: inherit;
+`;

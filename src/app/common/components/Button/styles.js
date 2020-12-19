@@ -13,7 +13,7 @@ export const Container = styled.button`
   line-height: 1;
 
   :disabled {
-    pointer-events: none;
+    cursor: not-allowed;
     background-color: ${(props) => props.theme.colors.secundary.disabled};
   }
 `;

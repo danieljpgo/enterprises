@@ -1,11 +1,13 @@
 import PropTypes from 'prop-types';
-import { Container, Error, Status } from './styles';
+import {
+  Container, Error, Status, Slot,
+} from './styles';
 
 const propTypes = {
   id: PropTypes.string,
   name: PropTypes.string,
   type: PropTypes.oneOf(['text', 'email', 'number', 'password', 'date', 'datetime-local', 'search', 'tel', 'time']),
-  value: PropTypes.oneOf([PropTypes.number, PropTypes.string, PropTypes.instanceOf(Date)]),
+  value: PropTypes.oneOfType([PropTypes.number, PropTypes.string, PropTypes.instanceOf(Date)]),
   status: PropTypes.oneOf(['error']),
   startAdornment: PropTypes.node,
   endAdornment: PropTypes.node,
@@ -26,7 +28,9 @@ const Input = (props) => {
 
   return (
     <Container $status={status}>
-      {startAdornment}
+      <Slot>
+        {startAdornment}
+      </Slot>
       <input
         id={id}
         name={name}
@@ -34,7 +38,9 @@ const Input = (props) => {
         value={value}
         onChange={onChange}
       />
-      {endAdornment}
+      <Slot>
+        {endAdornment}
+      </Slot>
       {status && (
         <Status>
           {status === 'error' && <Error>!</Error>}

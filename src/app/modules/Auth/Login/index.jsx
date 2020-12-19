@@ -6,8 +6,8 @@ import Button from '../../../common/components/Button';
 import logo from '../../../common/assets/images/logo-home.png';
 import Input from '../../../common/components/Input';
 import PasswordField from '../../../common/components/PasswordField';
-import MainIcon from '../../../common/components/MailIcon';
-import PasswordIcon from '../../../common/components/PasswordIcon';
+import MainIcon from '../../../common/components/icons/MailIcon';
+import PasswordIcon from '../../../common/components/icons/PasswordIcon';
 
 // @TODO baixar uma lib para lidar com diferente tamanhos de imagens
 // @TODO tamanho da logo "height"

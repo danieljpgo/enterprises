@@ -19,6 +19,7 @@ export const Content = styled.div`
   img{
     width: 100%;
     max-width: 285px;
+    height: 69px;
     object-fit: contain;
   }
 

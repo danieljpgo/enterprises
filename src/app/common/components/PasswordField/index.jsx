@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 import Input from '../Input';
-import EyeIcon from '../EyeIcon';
-import EyeEmptyIcon from '../EyeEmptyIcon';
+import EyeIcon from '../icons/EyeIcon';
+import EyeEmptyIcon from '../icons/EyeEmptyIcon';
 import { IconButton } from './styles';
 
 const propTypes = {

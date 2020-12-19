@@ -34,10 +34,11 @@ const Login = () => {
                 id="email"
                 name="email"
                 type="email"
+                status="error"
                 startAdornment={<div>a</div>}
-                endAdornment={<div>a</div>}
               />
               <PasswordField
+                status="error"
                 startAdornment={<div>a</div>}
               />
             </form>

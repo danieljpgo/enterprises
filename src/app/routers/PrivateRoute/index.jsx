@@ -1,7 +1,9 @@
 import { Navigate } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-// @TODO adicionar prop types
-
+const propTypes = {
+  children: PropTypes.node.isRequired,
+};
 const PrivateRoute = (props) => {
   const { children } = props; // eslint-disable-line 
 
@@ -15,5 +17,7 @@ const PrivateRoute = (props) => {
     </>
   );
 };
+
+PrivateRoute.prototype = propTypes;
 
 export default PrivateRoute;

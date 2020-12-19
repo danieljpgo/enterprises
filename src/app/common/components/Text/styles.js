@@ -33,6 +33,10 @@ const variants = {
   `,
   warning: css`
     color: ${(props) => props.theme.colors.text.warning};
+    font-size: 12px;
+    font-weight: normal;
+    font-family: ${(props) => props.theme.typography.fontFamily.primary};
+    letter-spacing: -0.17px;
   `,
   contrast: css`
     color: ${(props) => props.theme.colors.text.contrast};

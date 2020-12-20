@@ -10,31 +10,37 @@ const Company = () => {
     data,
     isError,
     isLoading,
-  } = useFetch('enterprises');
+  } = useFetch('enterprises?name=aQm');
 
   return (
-    <Container>
-      {isLoading && (
-        'loading'
+    <>
+      <Container>
+        {isLoading && (
+          'loading'
+        )}
+        {isError && (
+          'error'
+        )}
+        {!isError && !isLoading && Boolean(data.enterprises.length) && data.enterprises
+          .map((enterprise) => (
+            <Card key={enterprise?.id}>
+              <Content>
+                <Banner>{getShortName(enterprise?.enterprise_name)}</Banner>
+                <div>
+                  <div>
+                    <Title variants="aux">{enterprise?.enterprise_name}</Title>
+                    <Text variants="main">{enterprise?.enterprise_type.enterprise_type_name}</Text>
+                    <Text variants="main">{enterprise?.country}</Text>
+                  </div>
+                </div>
+              </Content>
+            </Card>
+          ))}
+      </Container>
+      {!data?.enterprises?.length && (
+        <Text variants="aux">Nenhuma empresa foi encontrada para a busca realizada.</Text>
       )}
-      {isError && (
-        'error'
-      )}
-      {!isError && !isLoading && data?.enterprises?.map((enterprise) => (
-        <Card key={enterprise?.id}>
-          <Content>
-            <Banner>{getShortName(enterprise?.enterprise_name)}</Banner>
-            <div>
-              <div>
-                <Title variants="aux">{enterprise?.enterprise_name}</Title>
-                <Text variants="main">{enterprise?.enterprise_type.enterprise_type_name}</Text>
-                <Text variants="main">{enterprise?.country}</Text>
-              </div>
-            </div>
-          </Content>
-        </Card>
-      ))}
-    </Container>
+    </>
   );
 };
 

@@ -1,31 +1,33 @@
-import { useLocation, useMatch, useNavigate } from 'react-router';
-import ArrowLeft from '../../../components/icons/ArrowLeft';
-import Title from '../../../components/Title';
-import { Container, IconButton } from './styles';
+import { useLocation, useMatch } from 'react-router';
+import SearchIcon from '../../../components/icons/SearchIcon';
+import IconButton from '../../../components/IconButton';
+import logoNav from '../../../assets/images/logo-nav.png';
+import Details from './Details';
+import { Container, Content } from './styles';
 
 const Header = () => {
   const location = useLocation();
-  const navigate = useNavigate();
-  const match = useMatch({ path: 'empresas/:id', caseSensitive: false, end: true });
-
-  function handleGoBack() {
-    navigate('empresas');
-  }
+  const detailsPage = useMatch({ path: 'empresas/:id', caseSensitive: false, end: true });
 
   return (
     <Container>
-      <div>
-        {match?.params?.id && (
-          <IconButton type="button" onClick={() => handleGoBack()}>
-            <ArrowLeft />
+      {detailsPage && (
+        <Details title={location?.state?.title} />
+      )}
+      {!detailsPage && (
+        <Content>
+          <div>
+            <img
+              src={logoNav}
+              alt="logo da empresa Ioasys, um i e um o, seguido com ioasys"
+            />
+          </div>
+          <IconButton type="button">
+            <SearchIcon />
           </IconButton>
-        )}
-        <div>
-          <Title variants="contrast">
-            {location?.state?.title}
-          </Title>
-        </div>
-      </div>
+        </Content>
+      )}
+
     </Container>
   );
 };

@@ -8,40 +8,30 @@ export const Container = styled.header`
   display: flex;
   align-items: center;
   padding: 
-    ${(props) => props.theme.unit * 4}px
+    ${(props) => props.theme.unit * 2.5}px
     ${(props) => props.theme.unit * 4}px
     ${(props) => props.theme.unit * 2.5}px
     ${(props) => props.theme.unit * 4}px;
   
-  > div {
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    gap: ${(props) => props.theme.unit * 4.75}px;
-    max-width: 1024px;
-  }
-
+  height: 82px;
+  
   @media(max-width: ${(props) => props.theme.breakpoints.sm}px) {
     padding: ${(props) => props.theme.unit * 3.5}px ${(props) => props.theme.unit * 2}px;
-
-    > div{
-      gap: ${(props) => props.theme.unit * 2}px;
-      > div {
-        display: flex;
-        justify-content: center;
-        width: calc(100% - 86px);
-      }
-    }
   }
 `;
 
-export const IconButton = styled.button`
-  border: none;
-  background: transparent;
-  display: grid;
+export const Content = styled.div`
+    display: flex;
+    width: 100%;
 
-  svg {
-    fill: ${(props) => props.theme.colors.text.contrast};
+  > div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-right: -26px;
+
+    img {
+      height: 30px;
+    }
   }
 `;

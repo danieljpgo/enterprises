@@ -5,8 +5,4 @@ export const Container = styled.button`
   background: transparent;
   display: grid;
   place-items: center;
-
-  svg {
-    fill: ${(props) => props.theme.colors.text.contrast};
-  }
 `;

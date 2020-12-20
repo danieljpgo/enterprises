@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router';
-import SearchIcon from '../../../../components/icons/SearchIcon';
-import Input from '../../../../components/Input';
 import { Container } from './styles';
+import SearchField from '../../../../components/SearchField';
 
 const Search = () => {
   const [term, setTerm] = useState('');
@@ -18,11 +17,10 @@ const Search = () => {
 
   return (
     <Container>
-      <Input
+      <SearchField
         id="search"
         name="search"
         type="text"
-        startAdornment={<SearchIcon />}
         value={term}
         onChange={(event) => setTerm(event.target.value)}
       />

@@ -35,6 +35,7 @@ export const theme = {
       line: colors.pink[500],
       icons: colors.pink[500],
       actionIcons: colors.gray[500],
+      contrast: colors.white,
     },
     surface: {
       base: colors.white,

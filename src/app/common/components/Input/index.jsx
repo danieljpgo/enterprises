@@ -1,11 +1,15 @@
 import PropTypes from 'prop-types';
 import {
-  Container, Error, Status, Slot,
+  Container,
+  Error,
+  Status,
+  Slot,
 } from './styles';
 
 const propTypes = {
   id: PropTypes.string,
   name: PropTypes.string,
+  contrast: PropTypes.bool,
   type: PropTypes.oneOf(['text', 'email', 'number', 'password', 'date', 'datetime-local', 'search', 'tel', 'time']),
   value: PropTypes.oneOfType([PropTypes.number, PropTypes.string, PropTypes.instanceOf(Date)]),
   status: PropTypes.oneOf(['error', false]),
@@ -22,6 +26,7 @@ const Input = (props) => {
     status,
     type = 'text',
     value,
+    contrast = false,
     startAdornment,
     endAdornment,
     onChange,
@@ -29,7 +34,10 @@ const Input = (props) => {
   } = props;
 
   return (
-    <Container $status={status}>
+    <Container
+      $status={status}
+      $contrast={contrast}
+    >
       <Slot>
         {startAdornment}
       </Slot>

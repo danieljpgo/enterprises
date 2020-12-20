@@ -4,8 +4,8 @@ const EyeEmptyIcon = () => (
     id="Capa_1"
     xmlns="http://www.w3.org/2000/svg"
     xlink="http://www.w3.org/1999/xlink"
-    x="0px"
-    y="0px"
+    x="26"
+    y="26"
     viewBox="0 0 511.999 511.999"
     xmlSpace="preserve"
   >

@@ -19,6 +19,7 @@ export const Container = styled.div`
   }
 
   ${(props) => status[props?.$status]};
+
   input {
     width: 100%;
     border: none;
@@ -31,6 +32,17 @@ export const Container = styled.div`
     font-family: ${(props) => props.theme.typography.fontFamily.primary};
     color: ${(props) => props.theme.colors.input.base};
   }
+
+  ${(props) => props.$contrast && css`
+    border-color: ${props.theme.colors.input.contrast};
+    :focus-within{
+      border-color: ${props.theme.colors.input.contrast};
+    }
+
+    input {
+      color: ${props.theme.colors.input.contrast};
+    }
+  `}
 `;
 
 export const Status = styled.div`

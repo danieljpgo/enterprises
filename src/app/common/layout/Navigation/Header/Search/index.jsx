@@ -21,6 +21,7 @@ const Search = () => {
         id="search"
         name="search"
         type="text"
+        trimTerm
         value={term}
         onChange={(event) => setTerm(event.target.value)}
       />

@@ -1,4 +1,4 @@
-import { useLocation, useMatch } from 'react-router';
+import { useLocation, useMatch, useNavigate } from 'react-router';
 import SearchIcon from '../../../components/icons/SearchIcon';
 import IconButton from '../../../components/IconButton';
 import logoNav from '../../../assets/images/logo-nav.png';
@@ -8,8 +8,14 @@ import { Container, Content } from './styles';
 
 const Header = () => {
   const location = useLocation();
+  const navigate = useNavigate();
+
   const enterpriseDetails = useMatch({ path: 'empresas/:id', caseSensitive: false, end: true });
   const enterpriseList = useMatch({ path: 'empresas', caseSensitive: false, end: true });
+
+  function handleNavigateTo(path) {
+    navigate(path);
+  }
 
   return (
     <Container>
@@ -27,7 +33,7 @@ const Header = () => {
               alt="logo da empresa Ioasys, um i e um o, seguido com ioasys"
             />
           </div>
-          <IconButton type="button">
+          <IconButton type="button" onClick={() => handleNavigateTo('empresas')}>
             <SearchIcon />
           </IconButton>
         </Content>

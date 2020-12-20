@@ -1,3 +1,4 @@
+import { useLocation } from 'react-router';
 import { useFetch } from '../../../common/utils/hooks/useFetch';
 import { getShortName } from '../../../common/utils/helpers';
 import Title from '../../../common/components/Title';
@@ -6,11 +7,13 @@ import Card from '../../../common/components/Card';
 import { Container, Content, Banner } from './styles';
 
 const Company = () => {
+  const { search } = useLocation();
+
   const {
     data,
     isError,
     isLoading,
-  } = useFetch('enterprises?name=aQm');
+  } = useFetch(`enterprises${search}`);
 
   return (
     <>

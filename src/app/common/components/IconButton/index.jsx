@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { Container } from './styles';
 
 const propTypes = {
-  children: PropTypes.string,
+  children: PropTypes.node,
   form: PropTypes.string,
   name: PropTypes.string,
   disabled: PropTypes.bool,

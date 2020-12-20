@@ -3,7 +3,11 @@ import { api } from '../../services/api';
 
 const fetcher = (endpoint) => api
   .get(endpoint)
-  .then((response) => response.data);
+  .then((response) => {
+    console.log(response);
+
+    return response.data;
+  });
 
 export const useFetch = (url, config) => {
   const {
@@ -13,6 +17,8 @@ export const useFetch = (url, config) => {
     mutate,
     revalidate,
   } = useSWR(url, fetcher, config);
+
+  console.log(data);
 
   return {
     data,

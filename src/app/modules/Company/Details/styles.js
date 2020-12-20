@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
-export const Container = styled.div``;
+export const Container = styled.div`
+`;
 
 export const Content = styled.div`
   padding: ${(props) => props.theme.unit * 4.5}px;

@@ -1,9 +1,13 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: ${(props) => props.theme.unit * 4}px;
+
+  ${(props) => props.$isLoading && css`
+    opacity: 0.6;
+  `}
 
   @media(max-width: ${(props) => props.theme.breakpoints.lg}px) {
     grid-template-columns: auto;
@@ -46,5 +50,9 @@ export const Banner = styled.div`
   color: ${(props) => props.theme.colors.title.contrast};
 `;
 
-/* @media(max-width: ${(props) => props.theme.breakpoints.xsm}px) { */
-/* } */
+export const MessageContainer = styled.div`
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;

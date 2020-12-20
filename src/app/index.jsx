@@ -14,6 +14,7 @@ const App = () => (
       refreshInterval: 0,
       errorRetryInterval: 5000,
       errorRetryCount: 3,
+
     }}
     >
       <Routers />

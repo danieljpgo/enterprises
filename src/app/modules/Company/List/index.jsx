@@ -1,12 +1,19 @@
 import { useLocation, useNavigate } from 'react-router';
+import { useState, useEffect } from 'react';
 import { useFetch } from '../../../common/utils/hooks/useFetch';
 import { getShortName } from '../../../common/utils/helpers';
 import Title from '../../../common/components/Title';
 import Text from '../../../common/components/Text';
 import Card from '../../../common/components/Card';
-import { Container, Content, Banner } from './styles';
+import {
+  MessageContainer,
+  Container,
+  Content,
+  Banner,
+} from './styles';
 
 const Company = () => {
+  const [enterprises, setEnterprises] = useState([]);
   const { search } = useLocation();
   const navigate = useNavigate();
 
@@ -16,20 +23,20 @@ const Company = () => {
     isLoading,
   } = useFetch(`enterprises${search}`);
 
+  useEffect(() => {
+    if (data) {
+      setEnterprises(data?.enterprises);
+    }
+  }, [data]);
+
   function handleSeeDetails(id) {
     navigate(`${id}`);
   }
 
   return (
     <>
-      <Container>
-        {isLoading && (
-          'loading'
-        )}
-        {isError && (
-          'error'
-        )}
-        {!isError && !isLoading && Boolean(data.enterprises.length) && data.enterprises
+      <Container $isLoading={isLoading}>
+        {!isError && Boolean(enterprises.length) && enterprises
           .map((enterprise) => (
             <Card key={enterprise?.id}>
               <Content onClick={() => handleSeeDetails(enterprise.id)}>
@@ -38,16 +45,26 @@ const Company = () => {
                   <div>
                     <Title variants="aux">{enterprise?.enterprise_name}</Title>
                     <Text variants="main">{enterprise?.enterprise_type.enterprise_type_name}</Text>
-                    <Text variants="main">{enterprise?.country}</Text>
+                    <Text variants="submain">{enterprise?.country}</Text>
                   </div>
                 </div>
               </Content>
             </Card>
           ))}
       </Container>
-      {!data?.enterprises?.length && (
-        <Text variants="aux">Nenhuma empresa foi encontrada para a busca realizada.</Text>
-      )}
+      <MessageContainer>
+        <Text variants="aux">
+          {isLoading && (
+            'Buscando empresas ...'
+          )}
+          {isError && (
+            'Ocorreu um erro, favor tentar novamente'
+          )}
+          {!enterprises?.length && !isError && !isLoading && (
+            'Nenhuma empresa foi encontrada para a busca realizada'
+          )}
+        </Text>
+      </MessageContainer>
     </>
   );
 };

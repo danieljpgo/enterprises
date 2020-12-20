@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import { Container } from './styles';
 
 const propTypes = {
-  children: PropTypes.string,
-  variants: PropTypes.oneOf(['main', 'base', 'sub', 'aux', 'warning', 'contrast']),
+  children: PropTypes.node,
+  variants: PropTypes.oneOf(['main', 'submain', 'base', 'sub', 'aux', 'warning', 'contrast']),
 };
 
 const Text = (props) => {

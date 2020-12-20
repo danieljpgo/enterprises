@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { Container } from './styles';
 
 const propTypes = {
-  children: PropTypes.string,
+  children: PropTypes.node,
   variants: PropTypes.oneOf(['base', 'aux', 'contrast']),
 };
 

@@ -8,6 +8,8 @@ export const Container = styled.div`
   width: 100%;
   gap: ${(props) => props.theme.unit * 4.75}px;
   max-width: 1024px;
+  min-height: ${(props) => props.theme.unit * 3.5}px;
+
 
   @media(max-width: ${(props) => props.theme.breakpoints.sm}px) {
     gap: ${(props) => props.theme.unit * 2}px;

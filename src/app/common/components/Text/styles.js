@@ -10,6 +10,13 @@ const variants = {
     font-family: ${(props) => props.theme.typography.fontFamily.primary};
     letter-spacing: normal;
   `,
+  submain: css`
+    color: ${(props) => props.theme.colors.text.main};
+    font-size: 12px;
+    font-weight: normal;
+    font-family: ${(props) => props.theme.typography.fontFamily.primary};
+    letter-spacing: normal;
+  `,
   base: css`
     color: ${(props) => props.theme.colors.text.base};
     font-size: 24px;

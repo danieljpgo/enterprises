@@ -1,10 +1,13 @@
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router';
+import { useNavigate, useLocation } from 'react-router';
 import { Container } from './styles';
 import SearchField from '../../../../components/SearchField';
 
 const Search = () => {
-  const [term, setTerm] = useState('');
+  const { search } = useLocation();
+  const urlSearch = search.split('=')[1];
+
+  const [term, setTerm] = useState(urlSearch || '');
   const navigate = useNavigate();
 
   useEffect(() => {

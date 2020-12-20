@@ -8,7 +8,7 @@ const propTypes = {
 
 const Title = (props) => {
   const {
-    children = 'untitled',
+    children,
     variants = 'base',
   } = props;
 

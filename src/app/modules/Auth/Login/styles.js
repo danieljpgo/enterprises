@@ -25,7 +25,7 @@ export const Content = styled.div`
 
   > div{
     display: grid;
-    gap: ${(props) => props.theme.unit * 2.5}px;
+    gap: ${(props) => props.theme.unit * 3.25}px;
     justify-items: center;
 
     > div:first-child{
@@ -33,21 +33,6 @@ export const Content = styled.div`
     }
     > div:nth-child(2){
       padding: 0 ${(props) => props.theme.unit * 4}px;
-    }
-    fieldset{
-      width: 100%;
-      > form {
-        display: grid;
-        gap: ${(props) => props.theme.unit * 3.75}px;
-        padding: ${(props) => props.theme.unit * 3}px 0 ${(props) => props.theme.unit * 2.5}px;;
-      }
-      > div {
-        height: 14px;
-      }
-    }
-    > div:last-child{
-      width: 100%;
-      padding: 0 ${(props) => props.theme.unit * 2}px;
     }
   }
 `;

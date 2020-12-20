@@ -12,6 +12,7 @@ const propTypes = {
   status: PropTypes.oneOf(['error', false]),
   value: PropTypes.string,
   onChange: PropTypes.func.isRequired,
+  onBlur: PropTypes.func,
 };
 
 const PasswordField = (props) => {
@@ -22,6 +23,7 @@ const PasswordField = (props) => {
     startAdornment,
     value,
     onChange,
+    onBlur,
   } = props;
 
   const [showPassword, setShowPassword] = useState(false);
@@ -49,6 +51,7 @@ const PasswordField = (props) => {
       )}
       value={value}
       onChange={onChange}
+      onBlur={onBlur}
     />
   );
 };

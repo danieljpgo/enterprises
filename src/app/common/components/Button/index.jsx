@@ -8,7 +8,7 @@ const propTypes = {
   name: PropTypes.string,
   type: PropTypes.oneOf(['button', 'reset', 'submit']),
   disabled: PropTypes.bool,
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
 };
 
 const Button = (props) => {

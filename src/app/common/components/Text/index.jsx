@@ -8,7 +8,7 @@ const propTypes = {
 
 const Text = (props) => {
   const {
-    children = 'untitled',
+    children,
     variants = 'main',
   } = props;
 

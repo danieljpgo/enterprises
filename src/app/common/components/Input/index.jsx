@@ -12,6 +12,7 @@ const propTypes = {
   startAdornment: PropTypes.node,
   endAdornment: PropTypes.node,
   onChange: PropTypes.func.isRequired,
+  onBlur: PropTypes.func,
 };
 
 const Input = (props) => {
@@ -24,6 +25,7 @@ const Input = (props) => {
     startAdornment,
     endAdornment,
     onChange,
+    onBlur,
   } = props;
 
   return (
@@ -37,6 +39,7 @@ const Input = (props) => {
         type={type}
         value={value}
         onChange={onChange}
+        onBlur={onBlur}
       />
       <Slot>
         {endAdornment}

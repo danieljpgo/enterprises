@@ -58,6 +58,7 @@ const Form = (props) => {
               id="email"
               name="email"
               type="email"
+              placeholder="E-mail"
               status={(requestError || Boolean(errors.email)) && 'error'}
               startAdornment={<MainIcon />}
               as={Input}
@@ -69,6 +70,7 @@ const Form = (props) => {
             <Field
               id="password"
               name="password"
+              placeholder="Senha"
               status={(requestError || Boolean(errors.password)) && 'error'}
               startAdornment={<PasswordIcon />}
               as={PasswordField}

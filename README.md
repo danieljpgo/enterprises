@@ -15,15 +15,15 @@ Estes documento README tem como objetivo fornecer as informações necessárias 
 
 # 🕵🏻‍♂️ Itens a serem avaliados
 
-- Estrutura do Projeto
-- Boas práticas da Linguagem/Framework
-- Integração com API
-- Bibliotecas utilizadas
-- Estilização dos componentes
-- Persistência de login
-- Layout responsivo
-- Friendly URL
-- Seu projeto deverá seguir tudo o que foi exigido na seção [O que desenvolver?](##--o-que-desenvolver)
+- ~~Estrutura do Projeto~~
+- ~~Bas práticas da Linguagem/Framework~~
+- ~~Integração com API~~
+- ~~Bibliotecas utilizadas~~
+- ~~Estilização dos componentes~~
+- ~~Persistência de login~~
+- ~~Layout responsivo~~
+- ~~Friendly URL~~
+- ~~Seu projeto deverá seguir tudo o que foi exigido na seção [O que desenvolver?](##--o-que-desenvolver)~~
 
 # 🎁 Extra
 
@@ -31,8 +31,8 @@ Esses itens não são obrigatórios, porém desejados.
 
 - Testes unitários
 - SEO
-- Linter
-- Code Formater
+- ~~Linter~~
+- ~~Code Formater~~
 - Documentação de componente
 
 # 🖥 O que desenvolver?

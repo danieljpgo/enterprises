@@ -9,10 +9,11 @@ import {
 const propTypes = {
   id: PropTypes.string,
   name: PropTypes.string,
-  contrast: PropTypes.bool,
-  type: PropTypes.oneOf(['text', 'email', 'number', 'password', 'date', 'datetime-local', 'search', 'tel', 'time']),
-  value: PropTypes.oneOfType([PropTypes.number, PropTypes.string, PropTypes.instanceOf(Date)]),
   status: PropTypes.oneOf(['error', false]),
+  type: PropTypes.oneOf(['text', 'email', 'number', 'password', 'date', 'datetime-local', 'search', 'tel', 'time']),
+  placeholder: PropTypes.string,
+  contrast: PropTypes.bool,
+  value: PropTypes.oneOfType([PropTypes.number, PropTypes.string, PropTypes.instanceOf(Date)]),
   startAdornment: PropTypes.node,
   endAdornment: PropTypes.node,
   onChange: PropTypes.func.isRequired,
@@ -26,6 +27,7 @@ const Input = (props) => {
     status,
     type = 'text',
     value,
+    placeholder,
     contrast = false,
     startAdornment,
     endAdornment,
@@ -46,6 +48,7 @@ const Input = (props) => {
         name={name}
         type={type}
         value={value}
+        placeholder={placeholder}
         onChange={onChange}
         onBlur={onBlur}
       />
@@ -54,7 +57,9 @@ const Input = (props) => {
       </Slot>
       {status && (
         <Status>
-          {status === 'error' && <Error>!</Error>}
+          {status === 'error' && (
+            <Error data-testid="input-status-error">!</Error>
+          )}
         </Status>
       )}
     </Container>

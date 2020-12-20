@@ -8,6 +8,7 @@ import { IconButton } from './styles';
 const propTypes = {
   id: PropTypes.string,
   name: PropTypes.string,
+  placeholder: PropTypes.string,
   startAdornment: PropTypes.node,
   status: PropTypes.oneOf(['error', false]),
   value: PropTypes.string,
@@ -20,6 +21,7 @@ const PasswordField = (props) => {
     id,
     name,
     status,
+    placeholder,
     startAdornment,
     value,
     onChange,
@@ -38,6 +40,7 @@ const PasswordField = (props) => {
       name={name}
       type={showPassword ? 'text' : 'password'}
       status={status}
+      placeholder={placeholder}
       startAdornment={startAdornment}
       endAdornment={value && (
         <IconButton

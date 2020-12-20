@@ -3,8 +3,15 @@ import { useEffect } from 'react';
 import { getShortName } from '../../../common/utils/helpers';
 import { useFetch } from '../../../common/utils/hooks/useFetch';
 import Card from '../../../common/components/Card';
+import Skeleton from '../../../common/components/Skeleton';
 import Text from '../../../common/components/Text';
-import { Container, Content, Banner } from './styles';
+import { MessageContainer } from '../List/styles';
+import {
+  LoadingContent,
+  Container,
+  Content,
+  Banner,
+} from './styles';
 
 const Details = () => {
   const { id } = useParams();
@@ -13,7 +20,6 @@ const Details = () => {
   const {
     data,
     isError,
-    isLoading,
   } = useFetch(`enterprises/${id}`);
 
   useEffect(() => {
@@ -24,21 +30,38 @@ const Details = () => {
         },
       });
     }
-  }, [data]);
+    if (isError) {
+      navigate('', {
+        state: {
+          title: data?.enterprise?.enterprise_name || 'Error ao buscar a empresa',
+        },
+      });
+    }
+  }, [data, isError]);
 
   return (
     <Container>
-      {isLoading && (
-        'loading'
-      )}
       {isError && (
-        'error'
+        <MessageContainer>
+          <Text variants="aux">Empresa não encontrada, favor buscar novamente a empresa na página anterior.</Text>
+        </MessageContainer>
       )}
-      {!isError && !isLoading && data && (
+      {!isError && (
         <Card>
           <Content>
-            <Banner>{data && getShortName(data?.enterprise?.enterprise_name)}</Banner>
-            <Text variants="base">{data?.enterprise?.description}</Text>
+            {data
+              ? (
+                <Banner>{data && getShortName(data?.enterprise?.enterprise_name)}</Banner>)
+              : <Skeleton height="240px" />}
+            {data
+              ? <Text variants="base">{data?.enterprise?.description}</Text>
+              : (
+                <LoadingContent>
+                  <Skeleton height="26px" />
+                  <Skeleton height="26px" />
+                  <Skeleton height="26px" />
+                </LoadingContent>
+              )}
           </Content>
         </Card>
       )}

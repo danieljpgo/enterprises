@@ -3,7 +3,8 @@ import { useNavigate } from 'react-router';
 import ArrowLeft from '../../../../components/icons/ArrowLeft';
 import Title from '../../../../components/Title';
 import IconButton from '../../../../components/IconButton';
-import { Container } from './styles';
+import Skeleton from '../../../../components/Skeleton';
+import { Container, SkeletonWrapper } from './styles';
 
 const propTypes = {
   title: PropTypes.string,
@@ -24,9 +25,17 @@ const Details = (props) => {
         <ArrowLeft />
       </IconButton>
       <div>
-        <Title variants="contrast">
-          {title}
-        </Title>
+        {title
+          ? (
+            <Title variants="contrast">
+              {title}
+            </Title>
+          )
+          : (
+            <SkeletonWrapper>
+              <Skeleton width="200px" height="26px" />
+            </SkeletonWrapper>
+          )}
       </div>
     </Container>
   );

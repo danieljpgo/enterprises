@@ -20,3 +20,7 @@ export const Container = styled.div`
     }
   }
 `;
+
+export const SkeletonWrapper = styled.div`
+  opacity: 0.35;
+`;

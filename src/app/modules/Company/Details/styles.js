@@ -25,3 +25,8 @@ export const Banner = styled.div`
   font-weight: bold;
   color: ${(props) => props.theme.colors.title.contrast};
 `;
+
+export const LoadingContent = styled.div`
+  display: grid;
+  gap: ${(props) => props.theme.unit * 1.25}px;
+`;

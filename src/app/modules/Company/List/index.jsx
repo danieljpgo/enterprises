@@ -13,7 +13,7 @@ import {
 } from './styles';
 
 const Company = () => {
-  const [enterprises, setEnterprises] = useState([]);
+  const [enterprises, setEnterprises] = useState();
   const { search } = useLocation();
   const navigate = useNavigate();
 
@@ -36,7 +36,7 @@ const Company = () => {
   return (
     <>
       <Container $isLoading={isLoading}>
-        {!isError && Boolean(enterprises.length) && enterprises
+        {!isError && Boolean(enterprises?.length) && enterprises
           .map((enterprise) => (
             <Card key={enterprise?.id}>
               <Content onClick={() => handleSeeDetails(enterprise.id)}>
@@ -60,7 +60,7 @@ const Company = () => {
           {isError && (
             'Ocorreu um erro, favor tentar novamente'
           )}
-          {!enterprises?.length && !isError && !isLoading && (
+          {enterprises?.length === 0 && !isError && !isLoading && (
             'Nenhuma empresa foi encontrada para a busca realizada'
           )}
         </Text>

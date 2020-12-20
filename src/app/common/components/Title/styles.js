@@ -19,7 +19,7 @@ const variants = {
   `,
   contrast: css`
     color: ${(props) => props.theme.colors.title.contrast};
-    font-size: 34px;
+    font-size: 24px;
     font-weight: normal;
     font-family: ${(props) => props.theme.typography.fontFamily.primary};
     letter-spacing: normal;

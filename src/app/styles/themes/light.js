@@ -40,6 +40,7 @@ export const theme = {
       base: colors.white,
       constrast: '',
       background: colors.gray[200],
+      banner: colors.green[500],
       input: colors.gray[800],
       gradiente: [
         colors.pink[500],

@@ -27,6 +27,9 @@ export const colors = {
   pink: {
     500: '#ee4c77', // medium-pink
   },
+  green: {
+    500: '#7dc075',
+  },
 };
 
 // https://app.zeplin.io/project/5977c41d78a49a0f1bf3966b/styleguide/colors

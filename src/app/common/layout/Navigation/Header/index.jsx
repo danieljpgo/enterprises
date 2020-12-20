@@ -1,5 +1,7 @@
 import { useLocation, useMatch, useNavigate } from 'react-router';
-import { Container } from './styles';
+import ArrowLeft from '../../../components/icons/ArrowLeft';
+import Title from '../../../components/Title';
+import { Container, IconButton } from './styles';
 
 const Header = () => {
   const location = useLocation();
@@ -12,12 +14,18 @@ const Header = () => {
 
   return (
     <Container>
-      {match?.params?.id && (
-        <button type="button" onClick={() => handleGoBack()}>
-          a
-        </button>
-      )}
-      {location?.state?.title}
+      <div>
+        {match?.params?.id && (
+          <IconButton type="button" onClick={() => handleGoBack()}>
+            <ArrowLeft />
+          </IconButton>
+        )}
+        <div>
+          <Title variants="contrast">
+            {location?.state?.title}
+          </Title>
+        </div>
+      </div>
     </Container>
   );
 };

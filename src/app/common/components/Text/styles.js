@@ -12,7 +12,7 @@ const variants = {
   `,
   base: css`
     color: ${(props) => props.theme.colors.text.base};
-    font-size: 34px;
+    font-size: 24px;
     font-weight: normal;
     font-family: ${(props) => props.theme.typography.fontFamily.secundary};
     letter-spacing: normal;

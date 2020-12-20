@@ -19,7 +19,7 @@ export const theme = {
     },
     text: {
       main: colors.gray[400],
-      base: colors.gray[800],
+      base: colors.gray[400],
       sub: colors.gray[800],
       aux: colors.gray[300],
       warning: colors.red[500],

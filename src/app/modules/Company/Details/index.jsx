@@ -1,10 +1,10 @@
-import { useParams, useNavigate } from 'react-router';
 import { useEffect } from 'react';
-import useFetch from '../../../common/utils/hooks/useFetch';
+import { useParams, useNavigate } from 'react-router';
+import { getShortName } from '../../../common/utils/helpers';
+import { useFetch } from '../../../common/utils/hooks/useFetch';
 import Card from '../../../common/components/Card';
 import Text from '../../../common/components/Text';
 import { Container, Content, Banner } from './styles';
-import { getShortName } from './utils';
 
 const Details = () => {
   const { id } = useParams();
@@ -26,8 +26,6 @@ const Details = () => {
     }
   }, [data]);
 
-  const shortName = data && getShortName(data?.enterprise?.enterprise_name);
-
   return (
     <Container>
       {isLoading && (
@@ -39,7 +37,7 @@ const Details = () => {
       {!isError && !isLoading && data && (
         <Card>
           <Content>
-            <Banner>{shortName}</Banner>
+            <Banner>{data && getShortName(data?.enterprise?.enterprise_name)}</Banner>
             <Text variants="base">{data?.enterprise?.description}</Text>
           </Content>
         </Card>

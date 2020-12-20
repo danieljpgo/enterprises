@@ -5,7 +5,7 @@ import styled, { css } from 'styled-components';
 const variants = {
   main: css`
     color: ${(props) => props.theme.colors.text.main};
-    font-size: 24px;
+    font-size: 16px;
     font-weight: normal;
     font-family: ${(props) => props.theme.typography.fontFamily.primary};
     letter-spacing: normal;

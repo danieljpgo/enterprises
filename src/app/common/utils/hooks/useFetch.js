@@ -5,7 +5,7 @@ const fetcher = (endpoint) => api
   .get(endpoint)
   .then((response) => response.data);
 
-const useFetch = (url, config) => {
+export const useFetch = (url, config) => {
   const {
     data,
     error,
@@ -23,5 +23,3 @@ const useFetch = (url, config) => {
     revalidate,
   };
 };
-
-export default useFetch;

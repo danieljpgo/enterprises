@@ -3,12 +3,12 @@ import styled from 'styled-components';
 export const Container = styled.div``;
 
 export const Content = styled.div`
-  padding: ${(props) => props.theme.unit * 4.5}px ${(props) => props.theme.unit * 6}px;
+  padding: ${(props) => props.theme.unit * 4.5}px;
   display: grid;
   gap: ${(props) => props.theme.unit * 4}px;
 
   @media(max-width: ${(props) => props.theme.breakpoints.xsm}px) {
-    padding: ${(props) => props.theme.unit * 3.5}px ${(props) => props.theme.unit * 3.5}px;
+    padding: ${(props) => props.theme.unit * 3.5}px;
   }
 `;
 

@@ -12,7 +12,7 @@ const variants = {
   `,
   aux: css`
     color: ${(props) => props.theme.colors.title.aux};
-    font-size: 30px;
+    font-size: 24px;
     font-weight: bold;
     font-family: ${(props) => props.theme.typography.fontFamily.primary};
     letter-spacing: normal;

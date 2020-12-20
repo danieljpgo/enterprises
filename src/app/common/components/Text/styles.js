@@ -11,14 +11,14 @@ const variants = {
     letter-spacing: normal;
   `,
   base: css`
-    color: ${(props) => props.theme.colors.title.main};
-    font-size: 34px;
+    color: ${(props) => props.theme.colors.text.base};
+    font-size: 32px;
     font-weight: normal;
-    font-family: ${(props) => props.theme.typography.fontFamily.secundary};
-    letter-spacing: 0.2px;
+    font-family: ${(props) => props.theme.typography.fontFamily.primary};
+    letter-spacing: -0.45px;
   `,
   sub: css`
-    color: ${(props) => props.theme.colors.title.sub};
+    color: ${(props) => props.theme.colors.text.sub};
     font-size: 17px;
     font-weight: normal;
     font-family: ${(props) => props.theme.typography.fontFamily.primary};

@@ -1,7 +1,7 @@
 export const shapes = {
   borderRadius: {
-    sm: '4px',
-    md: '5px',
+    sm: 4,
+    md: 5,
   },
 };
 

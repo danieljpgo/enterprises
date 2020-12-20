@@ -1,8 +1,9 @@
 import { Container } from './styles';
+import Text from '../../common/components/Text';
 
 const Home = () => (
   <Container>
-    Home
+    <Text variants="base">Clique na busca para iniciar.</Text>
   </Container>
 );
 

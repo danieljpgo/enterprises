@@ -51,8 +51,6 @@ export const GlobalStyles = createGlobalStyle`
   }
 `;
 
-// @TODO pensar se devo manter o padrão de exportação nomial ou usar export default
-
 export const GlobalStylesForStorybook = createGlobalStyle`
   * {
     margin: 0;

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-export const Container = styled(motion.li)`
+export const Container = styled(motion.div)`
   background-color: ${(props) => props.theme.colors.surface.base};
   border-radius: ${(props) => props.theme.shapes.borderRadius.md}px;
   display: block;

@@ -6,8 +6,6 @@ const propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-// @TODO adicionar as validações necessárias do token salvo
-
 const PrivateRoute = (props) => {
   const { children } = props;
 

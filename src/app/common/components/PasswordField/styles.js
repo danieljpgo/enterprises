@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-// @TODO Remover esse cara depois
-
 export const IconButton = styled.button`
   border: none;
   width: 26px;

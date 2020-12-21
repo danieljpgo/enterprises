@@ -17,11 +17,4 @@ export const Container = styled.button`
     cursor: not-allowed;
     background-color: ${(props) => props.theme.colors.secundary.disabled};
   }
-
-  :focus{
-    background-color: ${(props) => props.theme.colors.secundary.main}30;
-  }
-  
 `;
-
-// @TODO apontar sobre a diferença do tamanho do botão e das especificações

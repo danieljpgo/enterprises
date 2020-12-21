@@ -12,8 +12,6 @@ import Home from '../modules/Home';
 import List from '../modules/Company/List';
 import Details from '../modules/Company/Details';
 
-// @TODO Avaliar o uso de code split, fallback e suspense
-
 const Routers = () => (
   <BrowserRouter>
     <Routes>

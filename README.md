@@ -29,7 +29,7 @@ Estes documento README tem como objetivo fornecer as informações necessárias 
 
 Esses itens não são obrigatórios, porém desejados.
 
-- Testes unitários
+- ~~Testes unitários~~
 - SEO
 - ~~Linter~~
 - ~~Code Formater~~

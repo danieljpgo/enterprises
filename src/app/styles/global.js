@@ -15,11 +15,10 @@ export const GlobalStyles = createGlobalStyle`
     font-family: Roboto, Source Sans Pro;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: ${(props) => props.theme.colors.surface.background};
   }
 
-  body, input, button, textarea, select {
-
+  main {
+    background-color: ${(props) => props.theme.colors.surface.background};
   }
 
   fieldset{

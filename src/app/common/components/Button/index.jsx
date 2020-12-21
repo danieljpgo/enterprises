@@ -3,18 +3,31 @@ import Text from '../Text';
 import { Container } from './styles';
 
 const propTypes = {
+  /**
+   * Text to be render inside the button.
+   */
   children: PropTypes.string,
-  form: PropTypes.string,
+  /**
+   * Specifies a name for the button.
+   */
   name: PropTypes.string,
+  /**
+   * Specifies the type of button.
+   */
   type: PropTypes.oneOf(['button', 'reset', 'submit']),
+  /**
+   * Specifies that a button should be disabled.
+   */
   disabled: PropTypes.bool,
+  /**
+   * Callback function for handle click event.
+   */
   onClick: PropTypes.func,
 };
 
 const Button = (props) => {
   const {
     name,
-    form,
     type = 'button',
     children = 'untitled',
     disabled = false,
@@ -25,7 +38,6 @@ const Button = (props) => {
     <Container
       name={name}
       type={type}
-      form={form}
       disabled={disabled}
       onClick={onClick}
     >

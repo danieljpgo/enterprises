@@ -21,7 +21,8 @@
     "rules": {
         "import/prefer-default-export": "off",
         "react/react-in-jsx-scope": "off",
-        "react/require-default-props": "off"
+        "react/require-default-props": "off",
+        "react/jsx-props-no-spreading": "off"
         // @TODO Apontar que não está usando o default props de proposito
     }
 }

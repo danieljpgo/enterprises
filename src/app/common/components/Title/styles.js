@@ -1,7 +1,5 @@
 import styled, { css } from 'styled-components';
 
-// @TODO Adicionar depois as diferenças de tags h1,h2 e etc
-
 const variants = {
   base: css`
     color: ${(props) => props.theme.colors.title.base};
@@ -26,6 +24,10 @@ const variants = {
   `,
 };
 
-export const Container = styled.p`  
+export const H1 = styled.h2`  
+  ${(props) => variants[props.$variants]};
+`;
+
+export const H2 = styled.h2`  
   ${(props) => variants[props.$variants]};
 `;

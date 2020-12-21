@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Container } from './styles';
+import { H1, H2 } from './styles';
 
 const propTypes = {
   /**
@@ -18,10 +18,25 @@ const Title = (props) => {
     variants = 'base',
   } = props;
 
+  if (variants === 'contrast') {
+    return (
+      <H2 $variants={variants}>
+        {children}
+      </H2>
+    );
+  }
+  if (variants === 'aux') {
+    return (
+      <H2 $variants={variants}>
+        {children}
+      </H2>
+    );
+  }
+
   return (
-    <Container $variants={variants}>
+    <H1 $variants={variants}>
       {children}
-    </Container>
+    </H1>
   );
 };
 

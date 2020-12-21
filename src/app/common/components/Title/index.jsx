@@ -2,7 +2,13 @@ import PropTypes from 'prop-types';
 import { Container } from './styles';
 
 const propTypes = {
+  /**
+   * Element to be render inside the component.
+   */
   children: PropTypes.node,
+  /**
+   * Specifies the variants of title.
+   */
   variants: PropTypes.oneOf(['base', 'aux', 'contrast']),
 };
 

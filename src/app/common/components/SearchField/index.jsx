@@ -7,13 +7,37 @@ import IconButton from '../IconButton';
 import Input from '../Input';
 
 const propTypes = {
+  /**
+   * Specifies the id of input.
+   */
   id: PropTypes.string,
+  /**
+   * Specifies the name of input.
+   */
   name: PropTypes.string,
+  /**
+   * Specifies the value of an input element.
+   */
   value: PropTypes.string,
+  /**
+   * Specifies a short hint that describes the expected value of an input element.
+   */
   placeholder: PropTypes.string,
+  /**
+   * Specifies whether to return the search term without spaces.
+   */
   trimTerm: PropTypes.bool,
+  /**
+   * Specifies the value in milliseconds to call onChange.
+   */
   debounceTime: PropTypes.number,
+  /**
+   * Callback function for handle blur event.
+   */
   onBlur: PropTypes.func,
+  /**
+   * Callback function for handle change event.
+   */
   onChange: PropTypes.func.isRequired,
 };
 

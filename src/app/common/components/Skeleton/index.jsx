@@ -2,7 +2,13 @@ import PropTypes from 'prop-types';
 import { Container } from './styles';
 
 const propTypes = {
+  /**
+   * Specifies the height for the component. `px or %`
+   */
   height: PropTypes.string,
+  /**
+   * Specifies the width for the component. `px or %`
+   */
   width: PropTypes.string,
 };
 

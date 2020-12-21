@@ -2,17 +2,27 @@ import PropTypes from 'prop-types';
 import { Container } from './styles';
 
 const propTypes = {
+  /**
+   * Element to be render inside the button.
+   */
   children: PropTypes.node,
-  form: PropTypes.string,
+  /**
+   * Specifies a name for the button.
+   */
   name: PropTypes.string,
+  /**
+   * Specifies that a button should be disabled.
+   */
   disabled: PropTypes.bool,
+  /**
+   * Callback function for handle click event.
+   */
   onClick: PropTypes.func,
 };
 
 const IconButton = (props) => {
   const {
     name,
-    form,
     children,
     disabled = false,
     onClick,
@@ -21,7 +31,6 @@ const IconButton = (props) => {
   return (
     <Container
       name={name}
-      form={form}
       disabled={disabled}
       onClick={onClick}
     >

@@ -10,6 +10,7 @@ const propTypes = {
   id: PropTypes.string,
   name: PropTypes.string,
   value: PropTypes.string,
+  placeholder: PropTypes.string,
   trimTerm: PropTypes.bool,
   debounceTime: PropTypes.number,
   onBlur: PropTypes.func,
@@ -21,7 +22,8 @@ const SearchField = (props) => {
     id,
     name,
     value,
-    trimTerm = false,
+    placeholder,
+    trimTerm = true,
     debounceTime = 1000,
     onChange,
     onBlur,
@@ -32,7 +34,7 @@ const SearchField = (props) => {
 
   useEffect(() => {
     const searchTerm = trimTerm
-      ? debouncedTerm.trim()
+      ? debouncedTerm?.trim()
       : debouncedTerm;
 
     onChange({ target: { value: searchTerm } });
@@ -52,6 +54,7 @@ const SearchField = (props) => {
       id={id}
       name={name}
       type="text"
+      placeholder={placeholder}
       startAdornment={<SearchIcon />}
       endAdornment={value && (
         <IconButton

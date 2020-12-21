@@ -18,6 +18,11 @@ const Search = () => {
     }
   }, [term]);
 
+  function handleSearchChange(value) {
+    console.log(value);
+    setTerm(value);
+  }
+
   return (
     <Container>
       <SearchField
@@ -26,7 +31,7 @@ const Search = () => {
         type="text"
         trimTerm
         value={term}
-        onChange={(event) => setTerm(event.target.value)}
+        onChange={(event) => handleSearchChange(event.target.value)}
       />
     </Container>
   );

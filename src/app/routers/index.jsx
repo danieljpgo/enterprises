@@ -13,7 +13,6 @@ import List from '../modules/Company/List';
 import Details from '../modules/Company/Details';
 
 // @TODO Avaliar o uso de code split, fallback e suspense
-// @TODO Mergiar com a master
 
 const Routers = () => (
   <BrowserRouter>

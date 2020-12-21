@@ -1,3 +1,5 @@
+// https://tailwindcss.com/docs/breakpoints
+
 export const breakpoints = {
   xsm: 320,
   sm: 640,
@@ -6,6 +8,3 @@ export const breakpoints = {
   xl: 1280,
   '2xl': 1536,
 };
-
-// @TODO documentar da onde eu tirei esses valores
-// https://tailwindcss.com/docs/breakpoints

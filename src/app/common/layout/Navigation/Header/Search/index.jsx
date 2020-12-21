@@ -19,7 +19,6 @@ const Search = () => {
   }, [term]);
 
   function handleSearchChange(value) {
-    console.log(value);
     setTerm(value);
   }
 

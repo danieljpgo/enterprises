@@ -32,6 +32,7 @@ export const theme = {
     },
     input: {
       base: colors.gray[900],
+      placeholder: colors.gray[600],
       line: colors.pink[500],
       icons: colors.pink[500],
       actionIcons: colors.gray[500],

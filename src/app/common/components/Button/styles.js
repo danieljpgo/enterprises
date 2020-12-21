@@ -11,6 +11,7 @@ export const Container = styled.button`
   border: none;
   white-space: nowrap;
   line-height: 1;
+  transition: background-color 0.250s ease-in-out;
 
   :disabled {
     cursor: not-allowed;
@@ -18,5 +19,4 @@ export const Container = styled.button`
   }
 `;
 
-// @TODO Adicionar animação de transição entre disabled e normal
 // @TODO apontar sobre a diferença do tamanho do botão e das especificações

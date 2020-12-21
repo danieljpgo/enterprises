@@ -18,5 +18,3 @@ export const useLocalStorageState = (key, defaultValue) => {
 
   return [state, setState];
 };
-
-// @TODO verificar se mantenho a importação dos useEffect e useState

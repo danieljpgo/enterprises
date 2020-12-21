@@ -1,10 +1,10 @@
 import { ThemeProvider } from 'styled-components';
 import { theme } from '../src/app/styles/themes/light';
-import { GlobalStyles } from '../src/app/styles/global';
+import { GlobalStylesForStorybook } from '../src/app/styles/global';
 
 const withThemeProvider = (Story, context) => (
   <ThemeProvider theme={theme}>
-    <GlobalStyles />
+    <GlobalStylesForStorybook />
     <Story {...context} />
   </ThemeProvider>
 );

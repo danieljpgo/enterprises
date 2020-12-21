@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.ul`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: ${(props) => props.theme.unit * 4}px;
@@ -53,6 +53,7 @@ export const Banner = styled.div`
 export const MessageContainer = styled.div`
   height: 400px;
   display: flex;
+  text-align:center;
   align-items: center;
   justify-content: center;
 `;

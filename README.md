@@ -33,7 +33,7 @@ Esses itens não são obrigatórios, porém desejados.
 - SEO
 - ~~Linter~~
 - ~~Code Formater~~
-- Documentação de componente
+- ~~Documentação de componente~~
 
 # 🖥 O que desenvolver?
 

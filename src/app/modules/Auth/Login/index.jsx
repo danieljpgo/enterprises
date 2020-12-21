@@ -8,9 +8,6 @@ import Title from '../../../common/components/Title';
 import Text from '../../../common/components/Text';
 import Form from './Form';
 
-// @TODO baixar uma lib para lidar com diferente tamanhos de imagens
-// @TODO usar useReducer
-
 const Login = () => {
   const [isLoading, setIsLoaing] = useState(false);
   const [requestError, setRequestError] = useState('');

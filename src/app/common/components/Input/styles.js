@@ -12,6 +12,7 @@ export const Container = styled.div`
   align-items: center;
   padding: ${(props) => props.theme.unit / 2}px;
   width: 100%;
+  transition: border-color 0.150s ease-in-out;
   border-bottom: solid 1px ${(props) => props.theme.colors.surface.input};
 
   :focus-within{
@@ -31,6 +32,12 @@ export const Container = styled.div`
     font-weight: normal;
     font-family: ${(props) => props.theme.typography.fontFamily.primary};
     color: ${(props) => props.theme.colors.input.base};
+
+    ::placeholder {
+      color: ${(props) => props.theme.colors.input.placeholder};
+      font-size: 18px;
+      letter-spacing: -0.25px;
+    }
   }
 
   ${(props) => props.$contrast && css`

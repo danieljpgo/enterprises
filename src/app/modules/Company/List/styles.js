@@ -1,23 +1,55 @@
 import styled, { css } from 'styled-components';
+import { motion } from 'framer-motion';
 
-export const Container = styled.ul`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+export const Container = styled(motion.ul)`
+  display: flex;
   gap: ${(props) => props.theme.unit * 4}px;
+  flex-wrap: wrap;
+  position:relative;
 
   ${(props) => props.$isLoading && css`
     opacity: 0.6;
   `}
 
-  @media(max-width: ${(props) => props.theme.breakpoints.lg}px) {
-    grid-template-columns: auto;
-  }
   @media(max-width: ${(props) => props.theme.breakpoints.sm}px) {
     gap: ${(props) => props.theme.unit * 3.5}px;
   }
+
+`;
+
+export const CardWrapper = styled(motion.li)`
+  flex: 0 0 calc(40% - ${(props) => props.theme.unit * 2}px);
+  max-width: calc(40% - ${(props) => props.theme.unit * 2}px);
+  
+  &:nth-child(4n + 1),
+  &:nth-child(4n + 4) {
+    flex: 0 0 calc(60% - ${(props) => props.theme.unit * 2}px);
+    max-width: calc(60% - ${(props) => props.theme.unit * 2}px);
+  } 
+  @media only screen and (max-width: ${(props) => props.theme.breakpoints.xl}px) {
+    flex: 0 0 calc(50% - ${(props) => props.theme.unit * 2}px);
+    max-width: calc(50% - ${(props) => props.theme.unit * 2}px);
+    &:nth-child(4n + 1),
+    &:nth-child(4n + 4) {
+      flex: 0 0 calc(50% - ${(props) => props.theme.unit * 2}px);
+      max-width: calc(50% - ${(props) => props.theme.unit * 2}px);
+    }
+  }
+  @media only screen and (max-width: ${(props) => props.theme.breakpoints.md}px) {
+    flex: 1 0 calc(100% - ${(props) => props.theme.unit * 2}px);
+    max-width: calc(100% - ${(props) => props.theme.unit * 2}px);
+    
+    &:nth-child(4n + 1),
+    &:nth-child(4n + 4) {
+      flex: 1 0 calc(100% - ${(props) => props.theme.unit * 2}px);
+      max-width: calc(100% - ${(props) => props.theme.unit * 2}px);
+    }
+  }
+
 `;
 
 export const Content = styled.div`
+  cursor: pointer;
   padding: ${(props) => props.theme.unit * 4.5}px;
   display: grid;
   grid-template-columns: 2fr 3fr;

@@ -7,10 +7,12 @@ import Text from '../../../common/components/Text';
 import Card from '../../../common/components/Card';
 import {
   MessageContainer,
+  CardWrapper,
   Container,
   Content,
   Banner,
 } from './styles';
+import { stagger, fadeInUp } from '../../../common/utils/helpers/animations';
 
 const Company = () => {
   const [enterprises, setEnterprises] = useState();
@@ -35,21 +37,33 @@ const Company = () => {
 
   return (
     <>
-      <Container $isLoading={isLoading}>
+      <Container
+        $isLoading={isLoading}
+        variants={stagger}
+        initial="hidden"
+        animate={enterprises?.length && 'show'}
+        exit="out"
+      >
         {!isError && Boolean(enterprises?.length) && enterprises
           .map((enterprise) => (
-            <Card key={enterprise?.id}>
-              <Content onClick={() => handleSeeDetails(enterprise.id)}>
-                <Banner>{getShortName(enterprise?.enterprise_name)}</Banner>
-                <div>
+            <CardWrapper
+              key={enterprise?.id}
+              variants={fadeInUp}
+            >
+              <Card animate>
+                <Content onClick={() => handleSeeDetails(enterprise.id)}>
+                  <Banner>{getShortName(enterprise?.enterprise_name)}</Banner>
                   <div>
-                    <Title variants="aux">{enterprise?.enterprise_name}</Title>
-                    <Text variants="main">{enterprise?.enterprise_type.enterprise_type_name}</Text>
-                    <Text variants="submain">{enterprise?.country}</Text>
+                    <div>
+                      <Title variants="aux">{enterprise?.enterprise_name}</Title>
+                      <Text variants="main">{enterprise?.enterprise_type.enterprise_type_name}</Text>
+                      <Text variants="submain">{enterprise?.country}</Text>
+                    </div>
                   </div>
-                </div>
-              </Content>
-            </Card>
+                </Content>
+              </Card>
+            </CardWrapper>
+
           ))}
       </Container>
       <MessageContainer>

@@ -13,7 +13,7 @@ export const Container = styled.header`
     ${(props) => props.theme.unit * 2.5}px
     ${(props) => props.theme.unit * 4}px;
   
-  height: 82px;
+  min-height: 82px;
   
   @media(max-width: ${(props) => props.theme.breakpoints.sm}px) {
     padding: ${(props) => props.theme.unit * 3.5}px ${(props) => props.theme.unit * 2}px;

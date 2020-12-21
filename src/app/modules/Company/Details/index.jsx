@@ -43,15 +43,16 @@ const Details = () => {
     <Container>
       {isError && (
         <MessageContainer>
-          <Text variants="aux">Empresa não encontrada, favor buscar novamente a empresa na página anterior.</Text>
+          <Text variants="aux">
+            Empresa não encontrada, favor buscar novamente a empresa na página anterior.
+          </Text>
         </MessageContainer>
       )}
       {!isError && (
         <Card>
           <Content>
             {data
-              ? (
-                <Banner>{data && getShortName(data?.enterprise?.enterprise_name)}</Banner>)
+              ? <Banner>{data && getShortName(data?.enterprise?.enterprise_name)}</Banner>
               : <Skeleton height="240px" />}
             {data
               ? <Text variants="base">{data?.enterprise?.description}</Text>

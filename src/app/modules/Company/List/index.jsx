@@ -1,5 +1,6 @@
 import { useLocation, useNavigate } from 'react-router';
 import { useState, useEffect } from 'react';
+import { stagger, fadeInUp } from '../../../common/utils/helpers/animations';
 import { useFetch } from '../../../common/utils/hooks/useFetch';
 import { getShortName } from '../../../common/utils/helpers';
 import Title from '../../../common/components/Title';
@@ -12,7 +13,6 @@ import {
   Content,
   Banner,
 } from './styles';
-import { stagger, fadeInUp } from '../../../common/utils/helpers/animations';
 
 const Company = () => {
   const [enterprises, setEnterprises] = useState();

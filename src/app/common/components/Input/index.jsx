@@ -92,6 +92,7 @@ const Input = (props) => {
         name={name}
         type={type}
         value={value}
+        autoComplete="off"
         placeholder={placeholder}
         onChange={onChange}
         onBlur={onBlur}

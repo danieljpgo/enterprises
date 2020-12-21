@@ -11,13 +11,10 @@ import Form from './Form';
 const Login = () => {
   const [isLoading, setIsLoaing] = useState(false);
   const [requestError, setRequestError] = useState('');
-
   const navigate = useNavigate();
 
-  async function handleLoginSubmit(form) {
-    const { email, password } = form;
+  async function handleLoginSubmit({ email, password }) {
     setIsLoaing(true);
-
     try {
       const response = await api.post('users/auth/sign_in', { email, password });
       setIsLoaing(false);

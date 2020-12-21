@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { motion } from 'framer-motion';
 
 const status = {
   error: css`
@@ -52,7 +53,7 @@ export const Container = styled.div`
   `}
 `;
 
-export const Status = styled.div`
+export const Status = styled(motion.div)`
   padding: 0 ${(props) => props.theme.unit / 2}px;
 `;
 
@@ -67,6 +68,6 @@ export const Error = styled.div`
   color: ${(props) => props.theme.colors.text.contrast};
 `;
 
-export const Slot = styled.div`
+export const Slot = styled(motion.div)`
   display: inherit;
 `;

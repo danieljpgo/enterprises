@@ -1,4 +1,6 @@
 import PropTypes from 'prop-types';
+import { AnimatePresence } from 'framer-motion';
+import { fadeInOut } from '../../utils/helpers/animations';
 import {
   Container,
   Error,
@@ -73,9 +75,18 @@ const Input = (props) => {
       $status={status}
       $contrast={contrast}
     >
-      <Slot>
-        {startAdornment}
-      </Slot>
+      <AnimatePresence>
+        {startAdornment && (
+          <Slot
+            variants={fadeInOut}
+            initial="hidden"
+            animate="show"
+            exit="out"
+          >
+            {startAdornment}
+          </Slot>
+        )}
+      </AnimatePresence>
       <input
         id={id}
         name={name}
@@ -85,18 +96,32 @@ const Input = (props) => {
         onChange={onChange}
         onBlur={onBlur}
       />
-      {endAdornment && (
-        <Slot>
-          {endAdornment}
-        </Slot>
-      )}
-      {status && (
-        <Status>
-          {status === 'error' && (
-            <Error data-testid="input-status-error">!</Error>
-          )}
-        </Status>
-      )}
+      <AnimatePresence>
+        {endAdornment && (
+          <Slot
+            variants={fadeInOut}
+            initial="hidden"
+            animate="show"
+            exit="out"
+          >
+            {endAdornment}
+          </Slot>
+        )}
+      </AnimatePresence>
+      <AnimatePresence>
+        {status && (
+          <Status
+            variants={fadeInOut}
+            initial="hidden"
+            animate="show"
+            exit="out"
+          >
+            {status === 'error' && (
+              <Error data-testid="input-status-error">!</Error>
+            )}
+          </Status>
+        )}
+      </AnimatePresence>
     </Container>
   );
 };

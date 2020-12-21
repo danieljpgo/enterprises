@@ -11,7 +11,9 @@ export const theme = {
   unit,
 
   colors: {
-    primary: {},
+    primary: {
+      main: colors.pink[500],
+    },
     secundary: {
       disabled: colors.blue[200],
       main: colors.blue[500],

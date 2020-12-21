@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router';
-import { Container, Content } from './styles';
 import { setLocalStorageData } from '../../../common/utils/helpers/localStorage';
 import { api } from '../../../common/services/api';
 import logo from '../../../common/assets/images/logo-home.png';
 import Title from '../../../common/components/Title';
 import Text from '../../../common/components/Text';
+import Backdrop from '../../../common/components/Backdrop';
+import Spinner from '../../../common/components/Spinner';
+import { Container, Content } from './styles';
 import Form from './Form';
 
 const Login = () => {
@@ -42,32 +44,37 @@ const Login = () => {
   }
 
   return (
-    <Container>
-      <Content>
-        <img
-          src={logo}
-          alt="logo da empresa Ioasys, um i e um o, seguido com ioasys"
-        />
-        <div>
-          <div>
-            <Title variants="base">
-              BEM-VINDO AO EMPRESAS
-            </Title>
-          </div>
-          <div>
-            <Text variants="sub">
-              Lorem ipsum dolor sit amet, contetur adipiscing elit. Nunc accumsan.
-            </Text>
-          </div>
-          <Form
-            isLoading={isLoading}
-            requestError={requestError}
-            onSubmit={(value) => handleLoginSubmit(value)}
-            onBlurFields={() => handleBlurFields()}
+    <>
+      <Container>
+        <Content>
+          <img
+            src={logo}
+            alt="logo da empresa Ioasys, um i e um o, seguido com ioasys"
           />
-        </div>
-      </Content>
-    </Container>
+          <div>
+            <div>
+              <Title variants="base">
+                BEM-VINDO AO EMPRESAS
+              </Title>
+            </div>
+            <div>
+              <Text variants="sub">
+                Lorem ipsum dolor sit amet, contetur adipiscing elit. Nunc accumsan.
+              </Text>
+            </div>
+            <Form
+              isLoading={isLoading}
+              requestError={requestError}
+              onSubmit={(value) => handleLoginSubmit(value)}
+              onBlurFields={() => handleBlurFields()}
+            />
+          </div>
+        </Content>
+      </Container>
+      <Backdrop show={isLoading}>
+        <Spinner />
+      </Backdrop>
+    </>
   );
 };
 

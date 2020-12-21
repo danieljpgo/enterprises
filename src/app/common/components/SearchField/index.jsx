@@ -46,6 +46,7 @@ const SearchField = (props) => {
 
   function handleClearSearch() {
     onChange({ target: { value: '' } });
+    setTerm('');
   }
 
   return (

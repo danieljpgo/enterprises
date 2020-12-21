@@ -31,17 +31,13 @@ const Details = () => {
       });
     }
     if (isError) {
-      if (isError.response.status === 401) {
-        navigate('/login');
-      } else {
-        navigate('', {
-          state: {
-            title: data?.enterprise?.enterprise_name || 'Error ao buscar a empresa',
-          },
-        });
-      }
+      navigate('', {
+        state: {
+          title: data?.enterprise?.enterprise_name || 'Error ao buscar a empresa',
+        },
+      });
     }
-  }, [data, isError]);
+  }, [data]);
 
   return (
     <Container>

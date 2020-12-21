@@ -1,7 +1,6 @@
 import { getLocalStorageData } from '../../utils/helpers/localStorage';
-import { history } from '../../../routers/history';
 
-export const interceptor = async (config) => {
+export const request = async (config) => {
   if (!config.url.includes('sign_in')) {
     const { client, uid, ...headers } = getLocalStorageData('headers');
 
@@ -16,9 +15,14 @@ export const interceptor = async (config) => {
         },
       };
     }
-
-    history.push('/login');
-    throw new Error('Sua seção expirou. Faça login novamente');
   }
   return config;
+};
+
+export const response = (error) => {
+  if (error.response.status === 401 || error.response.status === 403) {
+    localStorage.removeItem('headers');
+    window.location.reload();
+  }
+  return Promise.reject(error);
 };

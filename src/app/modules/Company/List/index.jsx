@@ -29,7 +29,10 @@ const Company = () => {
     if (data) {
       setEnterprises(data?.enterprises);
     }
-  }, [data]);
+    if (isError?.response?.status === 401) {
+      navigate('/login');
+    }
+  }, [data, isError]);
 
   function handleSeeDetails(id) {
     navigate(`${id}`);

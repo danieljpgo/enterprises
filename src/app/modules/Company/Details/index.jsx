@@ -31,11 +31,15 @@ const Details = () => {
       });
     }
     if (isError) {
-      navigate('', {
-        state: {
-          title: data?.enterprise?.enterprise_name || 'Error ao buscar a empresa',
-        },
-      });
+      if (isError.response.status === 401) {
+        navigate('/login');
+      } else {
+        navigate('', {
+          state: {
+            title: data?.enterprise?.enterprise_name || 'Error ao buscar a empresa',
+          },
+        });
+      }
     }
   }, [data, isError]);
 

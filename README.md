@@ -83,6 +83,16 @@ yarn install
 yarn start
 ```
 
+Para executar os testes, segue o script:
+```
+yarn test
+```
+
+Para executar o playground o Storybook:
+```
+yarn storybook
+```
+
 ____
 
 # Descrição do teste

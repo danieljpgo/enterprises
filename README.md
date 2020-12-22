@@ -1,3 +1,66 @@
+<h1 align="left">Empresas Web</h1>
+
+> Teste técnico para vaga de Desenvolvedor Frontend React. :clipboard:
+
+&nbsp;
+
+<p align="center">
+   <a href="#observações">Observações</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+   <a href="#tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+   <a href="#getting-started">Getting Started</a>
+</p>
+
+## Observações
+Observações sobre o desenvolvimento do projeto:
+- Busquei utilizar mais importações nomeias a fim de promover uma maior consistência nas importações do projeto, segue o [link](https://humanwhocodes.com/blog/2019/01/stop-using-default-exports-javascript-module/) do artigo sobre o tema, do criado do ESlint, Nicholas C. Zakas,.
+- No desenvolvimento dos testes, busquei utilizar os conceitos do Kent C Dodds para o seu desenvolvimento, um deles foi evitar testes aninhados, segue o [link](https://kentcdodds.com/blog/avoid-nesting-when-youre-testing/) do post.
+- Para os icones, busquei utilizar SVG.
+- A estilização foi feita inicialmente "pixel perfect", porém as proporções não estavam boas, logo adaptei mas mantendo o mais proxímo possível da proporções especificadas no design.
+- Não foi necessário utilizar nenhuma forma de estado global (redux, context e etc) para comunicação dos componentes, foi delegado ao browser e sua api toda a parte de busca, em conjunto com a biblioteca de rotas, a fim de diminuir a complexidade do projeto e criar "friendly URL".
+- Os componentes foram desenvolvidos pensando em sua composição e caso de uso, expondo props apenas quando necessário.
+
+## Tecnologias
+As principais tecnlogias utilizadas foram:
+- [React](https://reactjs.org/)
+- [Axios](https://github.com/axios/axios)
+Solução utilizada para fetch dos dados, por possui abstrações para as requisições e utilização de interceptors, o que facilita a injeção dos tokens e validações das requisições.
+- [swr](https://swr.vercel.app/)
+Solução utilizada para realizar o fetch dos dados, utilizando a "HTTP cache invalidation strategy", a fim de separar o estado da aplicação em cliente e servidor, possibilitando o estado do servidor ser gerenciado via cache. Assim, todas as buscas já realizadas serão feitas instantaneamente por já se encontrarem na camada de cache, promovendo uma ux melhor.
+- [React Router Dom](https://reactrouter.com/web/guides/quick-start)
+Biblioteca utilizada para lidar com as rotas da aplicação, em particular está sendo utilizada a versão V6 Alpha, por possuir uma api muito superior.
+- [Styled Component](https://styled-components.com/)
+Solução utilizada para estilização dos componentes utilizando CSS-in-JS.
+- [Framer Motion](https://www.framer.com/motion/)
+Biblioteca "production-ready" para criação de expressivas animações, performaticas e de fácil desenvolvimento.
+- [Formik](https://formik.org/docs/overview)
+Utilizado para lidar com o formulario de login de forma simples, com ampla utilização no mercado e de fácil integração com Yup.
+- [Yup](https://github.com/jquense/yup/)
+Utilizado para validação dos campos de login e pela sua integração com o Formik.
+- [Storybook](https://storybook.js.org/)
+Biblioteca utilizada para criação, desenvolvimento de componentes e documentação, com ampla utilização no mercado.
+- [Testing Library](https://testing-library.com/)
+Solução utilizada para realizar os testes, recomendada pelo proprio Core Team do React e também por ser fã do Kent C Dodds.
+- [ESlint](https://eslint.org/)
+Solução para Linter e Code Formater (basta configurar o vscode para utilizar o eslint como formatador);
+
+O projeto foi bootstrapped utilizando:
+- [create-react-app](https://github.com/facebook/create-react-app)
+
+## Getting Started
+Inicialmente, você deve clonar o projeto:
+```
+git clone https://danieljpgo@bitbucket.org/danieljpgo/empresas-web.git
+```
+Execute os seguintes scripts para executar a aplicação:
+```
+// install dependencies
+yarn install
+
+// start the application
+yarn start
+```
+____
+
 # Sobre
 
 Estes documento README tem como objetivo fornecer as informações necessárias para realização do projeto Empresas.

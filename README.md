@@ -1,14 +1,9 @@
-<h1 align="left">Empresas Web</h1>
+# Empresas Web
 
 > Teste técnico para vaga de Desenvolvedor Frontend React. :clipboard:
 
 &nbsp;
-
-<p align="center">
-   <a href="#observações">Observações</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-   <a href="#tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-   <a href="#getting-started">Getting Started</a>
-</p>
+[Observações](#observações) &nbsp;&nbsp;|&nbsp;&nbsp; [Tecnologias](#tecnologias) &nbsp;&nbsp;|&nbsp;&nbsp; [Getting Started](#getting-started)
 
 ## Observações
 Observações sobre o desenvolvimento do projeto:
@@ -59,7 +54,10 @@ yarn install
 // start the application
 yarn start
 ```
+
 ____
+
+# Descrição do teste
 
 # Sobre
 
@@ -78,25 +76,25 @@ Estes documento README tem como objetivo fornecer as informações necessárias 
 
 # 🕵🏻‍♂️ Itens a serem avaliados
 
-- ~~Estrutura do Projeto~~
-- ~~Bas práticas da Linguagem/Framework~~
-- ~~Integração com API~~
-- ~~Bibliotecas utilizadas~~
-- ~~Estilização dos componentes~~
-- ~~Persistência de login~~
-- ~~Layout responsivo~~
-- ~~Friendly URL~~
-- ~~Seu projeto deverá seguir tudo o que foi exigido na seção [O que desenvolver?](##--o-que-desenvolver)~~
+- Estrutura do Projeto
+- Bas práticas da Linguagem/Framework
+- Integração com API
+- Bibliotecas utilizadas
+- Estilização dos componentes
+- Persistência de login
+- Layout responsivo
+- Friendly URL
+- Seu projeto deverá seguir tudo o que foi exigido na seção [O que desenvolver?](##--o-que-desenvolver)
 
 # 🎁 Extra
 
 Esses itens não são obrigatórios, porém desejados.
 
-- ~~Testes unitários~~
+- Testes unitários
 - SEO
-- ~~Linter~~
-- ~~Code Formater~~
-- ~~Documentação de componente~~
+- Linter
+- Code Formater
+- Documentação de componente
 
 # 🖥 O que desenvolver?
 

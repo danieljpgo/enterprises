@@ -1,12 +1,12 @@
 # Empresas Web
 
+
 > Teste técnico para vaga de Desenvolvedor Frontend React. :clipboard:
 
 
-[Observações](#observações) | [Tecnologias](#tecnologias) | [Getting Started](#getting-started)
-
 ## Observações
 Observações sobre o desenvolvimento do projeto:
+
 - Busquei utilizar mais importações nomeias a fim de promover uma maior consistência nas importações do projeto, segue o [link](https://humanwhocodes.com/blog/2019/01/stop-using-default-exports-javascript-module/) do artigo sobre o tema, do criado do ESlint, Nicholas C. Zakas.
 
 - No desenvolvimento dos testes, busquei utilizar os conceitos do Kent C Dodds para o seu desenvolvimento, um deles foi evitar testes aninhados, segue o [link](https://kentcdodds.com/blog/avoid-nesting-when-youre-testing/) do post.
@@ -20,7 +20,9 @@ Observações sobre o desenvolvimento do projeto:
 - Os componentes foram desenvolvidos pensando em sua composição e caso de uso, expondo props apenas quando necessário.
 
 ## Tecnologias
+
 As principais tecnlogias utilizadas foram:
+
 - [React](https://reactjs.org/)
 
 - [Axios](https://github.com/axios/axios)

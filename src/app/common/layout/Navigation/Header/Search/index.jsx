@@ -13,9 +13,9 @@ const Search = () => {
   useEffect(() => {
     if (term) {
       navigate(`empresas?name=${term}`);
-    } else {
-      navigate('empresas');
-    }
+      return;
+    } 
+    navigate('empresas');
   }, [term]);
 
   function handleSearchChange(value) {

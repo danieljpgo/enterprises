@@ -1,80 +1,107 @@
-# Empresas Web
+<!-- # Empresas Web
 
 
-> Teste técnico para vaga de Desenvolvedor Frontend React. :clipboard:
+> Teste técnico para vaga de Desenvolvedor Frontend React. :clipboard: -->
 
 
-## Observações
-Observações sobre o desenvolvimento do projeto:
+<div align="center">
+    <img
+      alt="enterprises"
+      title="enterprises"
+      src=".github/logo-home@3x.png"
+      width="200px" />
+</div>
 
-- Busquei utilizar mais importações nomeias a fim de promover uma maior consistência nas importações do projeto, segue o [link](https://humanwhocodes.com/blog/2019/01/stop-using-default-exports-javascript-module/) do artigo sobre o tema, do criado do ESlint, Nicholas C. Zakas.
+<h1 align="left">Enterprises</h1>
 
-- No desenvolvimento dos testes, busquei utilizar os conceitos do Kent C Dodds para o seu desenvolvimento, um deles foi evitar testes aninhados, segue o [link](https://kentcdodds.com/blog/avoid-nesting-when-youre-testing/) do post.
+<p align="left">
+   <a href="https://github.com/danieljpgo">
+      <img
+        alt="author"
+        src="https://img.shields.io/badge/author-danieljpgo-ee4c77"
+      />
+   </a>
+   <img
+      alt="languages"
+      src="https://img.shields.io/github/languages/count/danieljpgo/enterprises?color=ee4c77"
+   />
+   <a href="https://github.com/danieljpgo/enterprises/graphs/contributors">
+      <img
+        alt="contributors"
+        src="https://img.shields.io/github/stars/danieljpgo/enterprises?color=ee4c77"/>
+   </a>
+    <a href="https://github.com/danieljpgo/enterprises/network/members">
+      <img
+         alt="forks"
+         src="https://img.shields.io/github/forks/danieljpgo/enterprises?color=ee4c77"/>
+   </a>
+   <img alt="license" src="https://img.shields.io/badge/license-MIT-ee4c77">
+   <img alt="test coverage" src="./coverage/badge.svg">
+</p>
 
-- Para os icones, busquei utilizar SVG.
+> todo
 
-- A estilização foi feita inicialmente "pixel perfect", porém as proporções não estavam boas, logo adaptei mas mantendo o mais proxímo possível da proporções especificadas no design.
+&nbsp;
 
-- Não foi necessário utilizar nenhuma forma de estado global (redux, context e etc) para comunicação dos componentes, foi delegado ao browser e sua api toda a parte de busca, em conjunto com a biblioteca de rotas, a fim de diminuir a complexidade do projeto e criar "friendly URL".
+<p align="center">
+   <a href="#project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+   <a href="#goals">Goals</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+   <a href="#features">Features</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+   <a href="#technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+   <a href="#getting-started">Getting Started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+   <a href="#license">License</a>
+</p>
 
-- Os componentes foram desenvolvidos pensando em sua composição e caso de uso, expondo props apenas quando necessário.
+<div align="center">
+   <!-- <img
+      alt="enterprises"
+      title="enterprises"
+      src=".github/anim.gif"
+      width="640px" /> -->
+</div>
 
-## Tecnologias
+## Project
 
-As principais tecnlogias utilizadas foram:
+TODO
+
+## Goals
+
+The goals of this project were:
+- TODO
+
+## Features
+
+The main features of the project are:
+- TODO
+
+## Technologies
+
+The main technologies used to develop the project were:
 
 - [React](https://reactjs.org/)
-
-- [Axios](https://github.com/axios/axios)
-
-Solução utilizada para fetch dos dados, por possui abstrações para as requisições e utilização de interceptors, o que facilita a injeção dos tokens e validações das requisições.
-
-- [swr](https://swr.vercel.app/)
-
-Solução utilizada para realizar o fetch dos dados, utilizando a "HTTP cache invalidation strategy", a fim de separar o estado da aplicação em cliente e servidor, possibilitando o estado do servidor ser gerenciado via cache. Assim, todas as buscas já realizadas serão feitas instantaneamente por já se encontrarem na camada de cache, promovendo uma ux melhor.
-
-- [React Router Dom](https://reactrouter.com/web/guides/quick-start)
-
-Biblioteca utilizada para lidar com as rotas da aplicação, em particular está sendo utilizada a versão V6 Alpha, por possuir uma api muito superior.
-
+- [Yup](https://github.com/jquense/yup/)
+- [SWR](https://swr.vercel.app/)
+- [Formik](https://formik.org/)
+- [Storybook](https://storybook.js.org/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [Testing Library](https://testing-library.com/)
 - [Styled Component](https://styled-components.com/)
 
-Solução utilizada para estilização dos componentes utilizando CSS-in-JS.
-
-- [Framer Motion](https://www.framer.com/motion/)
-
-Biblioteca "production-ready" para criação de expressivas animações, performaticas e de fácil desenvolvimento.
-
-- [Formik](https://formik.org/docs/overview)
-
-Utilizado para lidar com o formulario de login de forma simples, com ampla utilização no mercado e de fácil integração com Yup.
-
-- [Yup](https://github.com/jquense/yup/)
-
-Utilizado para validação dos campos de login e pela sua integração com o Formik.
-
-- [Storybook](https://storybook.js.org/)
-
-Biblioteca utilizada para criação, desenvolvimento de componentes e documentação, com ampla utilização no mercado.
-
-- [Testing Library](https://testing-library.com/)
-
-Solução utilizada para realizar os testes, recomendada pelo proprio Core Team do React e também por ser fã do Kent C Dodds.
-
-- [ESlint](https://eslint.org/)
-
-Solução para Linter e Code Formater (basta configurar o vscode para utilizar o eslint como formatador);
-
-O projeto foi bootstrapped utilizando:
+This project was bootstrapped with:
 
 - [create-react-app](https://github.com/facebook/create-react-app)
 
+
 ## Getting Started
-Inicialmente, você deve clonar o projeto:
+
+First of all, you may clone this project:
+
 ```
-git clone https://danieljpgo@bitbucket.org/danieljpgo/empresas-web.git
+git clone https://github.com/danieljpgo/enterprises.git
 ```
-Execute os seguintes scripts para executar a aplicação:
+
+Run the following scripts in order to execute the application:
+
 ```
 // install dependencies
 yarn install
@@ -83,81 +110,22 @@ yarn install
 yarn start
 ```
 
-Para executar os testes, segue o script:
+To run the tests:
+
 ```
 yarn test
 ```
 
-Para executar o playground o Storybook:
+To run the Storybook:
+
 ```
 yarn storybook
 ```
 
-____
+## License
 
-# Descrição do teste
+This project is under the [MIT license](https://github.com/danieljpgo/enterprises/blob/master/LICENSE).
 
-# Sobre
+<div>Released in 2020.</div>
 
-Estes documento README tem como objetivo fornecer as informações necessárias para realização do projeto Empresas.
-
-# 🏗 O que fazer?
-
-- Você deve realizar um fork deste repositório e, ao finalizar, enviar o link do seu repositório para a nossa equipe. Lembre-se, NÃO é necessário criar um Pull Request para isso, nós iremos avaliar e retornar por email o resultado do seu teste.
-
-# 🚨 Requisitos
-
-- Seu projeto deverá ser construído utilizando **ReactJS** ou **Angular**.
-- Seu projeto deverá ser construído utilizando o layout disponibilizado na descrição do teste.
-- A integração com a API deve ser feita respeitando todos os contratos de OAuth.
-- Projetos utilizando **ReactJS** serão aceitos testes somente em **JavaScript** buscando avaliar o entendimento completo da linguagem e não de estruturas ou dependências que abstraiam determinadas definições não alheias ao ECMAScript.
-
-# 🕵🏻‍♂️ Itens a serem avaliados
-
-- Estrutura do Projeto
-- Bas práticas da Linguagem/Framework
-- Integração com API
-- Bibliotecas utilizadas
-- Estilização dos componentes
-- Persistência de login
-- Layout responsivo
-- Friendly URL
-- Seu projeto deverá seguir tudo o que foi exigido na seção [O que desenvolver?](##--o-que-desenvolver)
-
-# 🎁 Extra
-
-Esses itens não são obrigatórios, porém desejados.
-
-- Testes unitários
-- SEO
-- Linter
-- Code Formater
-- Documentação de componente
-
-# 🖥 O que desenvolver?
-
-Você deverá construir um projeto utilizando o layout proposto
-
-- Login e acesso de Usuário já registrado
-  - Para o login usamos padrões OAuth 2.0. Na resposta de sucesso do login a api retornará 3 custom headers (access-token, client, uid);
-  - Para ter acesso as demais APIS precisamos enviar esses 3 custom headers para a API autorizar a requisição;
-- Listagem de Empresas
-- Detalhamento de Empresas
-
-# 🔗 Links e Informações Importantes
-
-## Layout
-
-- Layout e recortes disponíveis no Zeplin
-- https://app.zeplin.io/
-- **usuário:** teste_web
-- **senha:** teste_ioasys
-
-## Integração com API
-
-- A documentação da API está disponível a partir de uma collection para Postman (https://www.getpostman.com/apps) neste repositório. Para utilizar a collection, vá até o postman e import a colllection que está disponível neste repositório, assim você terá acesso as documentação da API.
-
-- **Servidor:** http://empresas.ioasys.com.br
-- **Versão da API:** v1
-- **Usuário de Teste:** testeapple@ioasys.com.br
-- **Senha de Teste:** 12341234
+Make with ❤️ by [Daniel Jorge](https://github.com/danieljpgo)

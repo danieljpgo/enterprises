@@ -24,18 +24,18 @@ const Login = () => {
       if (response?.data?.success) {
         setLocalStorageData('headers', response.headers);
         navigate('/');
-      } else {
-        setRequestError('Falha ao realizar o login, tentar novamente mais tarde.');
-      }
+        return;
+      } 
+      setRequestError('Falha ao realizar o login, tentar novamente mais tarde.');
     } catch (error) {
       setIsLoaing(false);
 
       const { status } = error.response;
       if (status === 401) {
         setRequestError('Credenciais de login inválidas. Por favor, tente novamente.');
-      } else {
-        setRequestError('Falha ao realizar o login, tentar novamente mais tarde.');
-      }
+        return;
+      } 
+      setRequestError('Falha ao realizar o login, tentar novamente mais tarde.');
     }
   }
 

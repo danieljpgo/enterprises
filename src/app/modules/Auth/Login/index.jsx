@@ -25,7 +25,7 @@ const Login = () => {
         setLocalStorageData('headers', response.headers);
         navigate('/');
         return;
-      } 
+      }
       setRequestError('Falha ao realizar o login, tentar novamente mais tarde.');
     } catch (error) {
       setIsLoaing(false);
@@ -34,7 +34,7 @@ const Login = () => {
       if (status === 401) {
         setRequestError('Credenciais de login inválidas. Por favor, tente novamente.');
         return;
-      } 
+      }
       setRequestError('Falha ao realizar o login, tentar novamente mais tarde.');
     }
   }

@@ -21,7 +21,7 @@ export const request = async (config) => {
 
 export const response = (error) => {
   if (error.response.status === 401 || error.response.status === 403) {
-    localStorage.removeItem('headers');
+    window.localStorage.removeItem('headers');
     window.location.reload();
   }
   return Promise.reject(error);

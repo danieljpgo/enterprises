@@ -36,7 +36,6 @@
          src="https://img.shields.io/github/forks/danieljpgo/enterprises?color=ee4c77"/>
    </a>
    <img alt="license" src="https://img.shields.io/badge/license-MIT-ee4c77">
-   <img alt="test coverage" src="./coverage/badge.svg">
 </p>
 
 > todo

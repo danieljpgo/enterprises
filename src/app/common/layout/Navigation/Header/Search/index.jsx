@@ -14,7 +14,7 @@ const Search = () => {
     if (term) {
       navigate(`empresas?name=${term}`);
       return;
-    } 
+    }
     navigate('empresas');
   }, [term]);
 

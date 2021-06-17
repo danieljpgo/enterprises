@@ -1,9 +1,3 @@
-<!-- # Empresas Web
-
-
-> Teste técnico para vaga de Desenvolvedor Frontend React. :clipboard: -->
-
-
 <div align="center">
     <img
       alt="enterprises"
@@ -38,40 +32,38 @@
    <img alt="license" src="https://img.shields.io/badge/license-MIT-ee4c77">
 </p>
 
-> todo
+> frontend technical test :dart:.
 
 &nbsp;
 
 <p align="center">
    <a href="#project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
    <a href="#goals">Goals</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-   <a href="#features">Features</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
    <a href="#technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
    <a href="#getting-started">Getting Started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
    <a href="#license">License</a>
 </p>
 
 <div align="center">
-   <!-- <img
+   <img
       alt="enterprises"
       title="enterprises"
       src=".github/anim.gif"
-      width="640px" /> -->
+      width="640px" />
 </div>
 
 ## Project
 
-TODO
+The project was a frontend technical test to work as a frontend engineer.
 
 ## Goals
 
 The goals of this project were:
-- TODO
+- Simplify state management using the concepts of client state and server state ([SWR](https://swr.vercel.app/)).
+- Develop components focused on composition with great documentation ([Storybook](https://storybook.js.org/)).
+- Develop an application [theme](https://github.com/danieljpgo/enterprises/blob/master/src/app/styles/themes/light.js) based on design tokens derived from an interface specification.
 
-## Features
 
-The main features of the project are:
-- TODO
 
 ## Technologies
 
